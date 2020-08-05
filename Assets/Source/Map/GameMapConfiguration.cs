@@ -1,12 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Entidades.Map
 {
     /// <summary>
-    /// This object contains all the parametric data for the game map
+    /// Class containing all the data related to the
+    /// game map parameters
     /// </summary>
-    [CreateAssetMenu(fileName = "GameMapConfiguration", menuName = "Game Configurations/GameMapConfiguration", order = 1)]
-    public class GameMapConfiguration : ScriptableObject
+    [Serializable]
+    public class GameMapConfiguration
     {
         [SerializeField] private Vector2Int _dimensions;
 

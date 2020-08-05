@@ -8,15 +8,18 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int EntidadesTile = 0;
+    public const int EntidadesMapTilePosition = 0;
+    public const int EntidadesTile = 1;
 
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 2;
 
     public static readonly string[] componentNames = {
+        "EntidadesMapTilePosition",
         "EntidadesTile"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(Entidades.Map.Tile.PositionComponent),
         typeof(Entidades.TileComponent)
     };
 }

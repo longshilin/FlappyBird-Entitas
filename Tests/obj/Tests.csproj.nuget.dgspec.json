@@ -1,0 +1,181 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Tests\\Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Assembly-CSharp.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Assembly-CSharp.csproj",
+        "projectName": "Assembly-CSharp",
+        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Assembly-CSharp.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj"
+              },
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj"
+              },
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj"
+              },
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj"
+              },
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Tests\\Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Tests\\Tests.csproj",
+        "projectName": "Tests",
+        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Tests\\Tests.csproj",
+        "packagesPath": "C:\\Users\\Jose\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jose\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Assembly-CSharp.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Assembly-CSharp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj",
+        "projectName": "UniRx",
+        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj"
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj",
+        "projectName": "Zenject-Editor",
+        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj",
+        "projectName": "Zenject-PoolMonitor-Editor",
+        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj"
+              },
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj",
+        "projectName": "Zenject-ReflectionBaking-Editor",
+        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj"
+              },
+              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
+                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj",
+        "projectName": "Zenject",
+        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    }
+  }
+}

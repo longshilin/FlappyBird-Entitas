@@ -6,23 +6,17 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public static class GameComponentsLookup {
+public static class ConfigurationComponentsLookup {
 
-    public const int GeometryTowersMapGameMap = 0;
-    public const int GeometryTowersMapTilePosition = 1;
-    public const int GeometryTowersTile = 2;
+    public const int GameMapConfiguration = 0;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 1;
 
     public static readonly string[] componentNames = {
-        "GeometryTowersMapGameMap",
-        "GeometryTowersMapTilePosition",
-        "GeometryTowersTile"
+        "GameMapConfiguration"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(GeometryTowers.Map.GameMapComponent),
-        typeof(GeometryTowers.Map.Tile.PositionComponent),
-        typeof(GeometryTowers.TileComponent)
+        typeof(GameMapConfigurationComponent)
     };
 }

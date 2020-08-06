@@ -23,6 +23,10 @@ public class PlayerSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     public void Initialize()
     {
         var entity = _contexts.game.CreateEntity();
+
+        entity.isPlayer = true;
+
+        entity.AddVelocity(Vector3.zero);
         entity.AddPosition(Vector3.zero);
         entity.AddRotation(Quaternion.identity);
         entity.AddScale(Vector3.one);

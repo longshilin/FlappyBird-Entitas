@@ -13,5 +13,6 @@ public sealed class GameEventSystems : Feature {
         Add(new PositionEventSystem(contexts)); // priority: 0
         Add(new RotationEventSystem(contexts)); // priority: 0
         Add(new ScaleEventSystem(contexts)); // priority: 0
+        Add(new VelocityEventSystem(contexts)); // priority: 0
     }
 }

@@ -18,9 +18,11 @@ public static class GameComponentsLookup {
     public const int Scale = 7;
     public const int ScaleListener = 8;
     public const int SyncPosition = 9;
-    public const int View = 10;
+    public const int Velocity = 10;
+    public const int VelocityListener = 11;
+    public const int View = 12;
 
-    public const int TotalComponents = 11;
+    public const int TotalComponents = 13;
 
     public static readonly string[] componentNames = {
         "Asset",
@@ -33,6 +35,8 @@ public static class GameComponentsLookup {
         "Scale",
         "ScaleListener",
         "SyncPosition",
+        "Velocity",
+        "VelocityListener",
         "View"
     };
 
@@ -47,6 +51,8 @@ public static class GameComponentsLookup {
         typeof(ScaleComponent),
         typeof(ScaleListenerComponent),
         typeof(SyncPositionComponent),
+        typeof(VelocityComponent),
+        typeof(VelocityListenerComponent),
         typeof(ViewComponent)
     };
 }

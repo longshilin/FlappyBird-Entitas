@@ -1,9 +1,28 @@
 ﻿using Entitas;
 using Entitas.Unity;
 using UnityEngine;
+using View;
 
-public class UnityViewS : MonoBehaviour, IView, IPositionListener, IDestroyedListener
+public class UnityView : MonoBehaviour, IUnityView, IPositionListener, IRotationListener, IScaleListener, IDestroyedListener
 {
+    public virtual Vector3 Position
+    {
+        get => transform.localPosition;
+        set => transform.localPosition = value;
+    }
+
+    public virtual Quaternion Rotation
+    {
+        get => transform.localRotation;
+        set => transform.localRotation = value;
+    }
+
+    public virtual Vector3 Scale
+    {
+        get => transform.localScale;
+        set => transform.localScale = value;
+    }
+
     public virtual void Link(IEntity entity)
     {
         gameObject.Link(entity);
@@ -18,7 +37,7 @@ public class UnityViewS : MonoBehaviour, IView, IPositionListener, IDestroyedLis
 
     public virtual void OnPosition(GameEntity entity, Vector3 value)
     {
-        transform.localPosition = new Vector3(value.x, value.y);
+        transform.localPosition = value;
     }
 
     public virtual void OnDestroyed(GameEntity entity)
@@ -30,5 +49,19 @@ public class UnityViewS : MonoBehaviour, IView, IPositionListener, IDestroyedLis
     {
         gameObject.Unlink();
         Destroy(gameObject);
+    }
+
+    public void OnRotation(GameEntity entity, Quaternion value)
+    {
+        transform.localRotation = value;
+    }
+
+    public void OnScale(GameEntity entity, Vector3 value)
+    {
+        transform.localScale = value;
+    }
+
+    public virtual void Awake()
+    {
     }
 }

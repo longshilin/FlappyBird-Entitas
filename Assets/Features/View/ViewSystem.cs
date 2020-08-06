@@ -26,7 +26,7 @@ public sealed class ViewSystem : ReactiveSystem<GameEntity>
 
     IView InstantiateView(GameEntity entity)
     {
-        var prefab = Resources.Load<GameObject>(entity.asset.value);
+        var prefab = Resources.Load<GameObject>(entity.asset.Value);
         var view = Object.Instantiate(prefab, _parent).GetComponent<IView>();
         view.Link(entity);
         return view;

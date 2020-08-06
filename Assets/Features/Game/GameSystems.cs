@@ -1,4 +1,5 @@
 ﻿using GeometryTowers.Map;
+using GeometryTowers.View;
 
 namespace GeometryTowers.Game
 {
@@ -7,6 +8,7 @@ namespace GeometryTowers.Game
         public GameSystems(Contexts contexts)
         {
             Add(new GameMapSystem(contexts));
+            Add(new ViewSystem(contexts));
         }
     }
 

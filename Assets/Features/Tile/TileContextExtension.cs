@@ -9,7 +9,8 @@ namespace GeometryTowers.Tile
         {
             var e = context.CreateEntity();
             e.AddGeometryTowersTile(GameTileType.Empty);
-            e.AddGeometryTowersMapTilePosition(new Vector2(x, y));
+            e.AddGeometryTowersComponentsPosition(new Vector2Int(x, y));
+            e.AddGeometryTowersViewAsset("Slot");
             return e;
         }
     }

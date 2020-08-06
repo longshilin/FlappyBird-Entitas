@@ -8,21 +8,30 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int GeometryTowersMapGameMap = 0;
-    public const int GeometryTowersMapTilePosition = 1;
+    public const int GeometryTowersComponentsPosition = 0;
+    public const int GeometryTowersMapGameMap = 1;
     public const int GeometryTowersTile = 2;
+    public const int GeometryTowersViewAsset = 3;
+    public const int GeometryTowersViewView = 4;
+    public const int GeometryTowersComponentsPositionListener = 5;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 6;
 
     public static readonly string[] componentNames = {
+        "GeometryTowersComponentsPosition",
         "GeometryTowersMapGameMap",
-        "GeometryTowersMapTilePosition",
-        "GeometryTowersTile"
+        "GeometryTowersTile",
+        "GeometryTowersViewAsset",
+        "GeometryTowersViewView",
+        "GeometryTowersComponentsPositionListener"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(GeometryTowers.Components.PositionComponent),
         typeof(GeometryTowers.Map.GameMapComponent),
-        typeof(GeometryTowers.Map.Tile.PositionComponent),
-        typeof(GeometryTowers.TileComponent)
+        typeof(GeometryTowers.TileComponent),
+        typeof(GeometryTowers.View.AssetComponent),
+        typeof(GeometryTowers.View.ViewComponent),
+        typeof(GeometryTowersComponentsPositionListenerComponent)
     };
 }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbf58eba8f6af54d8fdc497e7370acf, type: 3}
   m_Name: GameMapConfiguration
   m_EditorClassIdentifier: 
-  _dimensions: {x: 0, y: 0}
+  _dimensions: {x: 9, y: 9}

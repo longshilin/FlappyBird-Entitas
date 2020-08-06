@@ -13,10 +13,14 @@ public static class GameComponentsLookup {
     public const int DestroyedListener = 2;
     public const int Position = 3;
     public const int PositionListener = 4;
-    public const int SyncPosition = 5;
-    public const int View = 6;
+    public const int Rotation = 5;
+    public const int RotationListener = 6;
+    public const int Scale = 7;
+    public const int ScaleListener = 8;
+    public const int SyncPosition = 9;
+    public const int View = 10;
 
-    public const int TotalComponents = 7;
+    public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
         "Asset",
@@ -24,6 +28,10 @@ public static class GameComponentsLookup {
         "DestroyedListener",
         "Position",
         "PositionListener",
+        "Rotation",
+        "RotationListener",
+        "Scale",
+        "ScaleListener",
         "SyncPosition",
         "View"
     };
@@ -34,6 +42,10 @@ public static class GameComponentsLookup {
         typeof(DestroyedListenerComponent),
         typeof(PositionComponent),
         typeof(PositionListenerComponent),
+        typeof(RotationComponent),
+        typeof(RotationListenerComponent),
+        typeof(ScaleComponent),
+        typeof(ScaleListenerComponent),
         typeof(SyncPositionComponent),
         typeof(ViewComponent)
     };

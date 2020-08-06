@@ -2,7 +2,7 @@
 using Entitas.Unity;
 using UnityEngine;
 
-public class View : MonoBehaviour, IView, IPositionListener, IDestroyedListener
+public class UnityViewS : MonoBehaviour, IView, IPositionListener, IDestroyedListener
 {
     public virtual void Link(IEntity entity)
     {

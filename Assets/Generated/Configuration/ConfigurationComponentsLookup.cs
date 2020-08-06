@@ -8,15 +8,15 @@
 //------------------------------------------------------------------------------
 public static class ConfigurationComponentsLookup {
 
-    public const int GameMapConfiguration = 0;
 
-    public const int TotalComponents = 1;
+
+    public const int TotalComponents = 0;
 
     public static readonly string[] componentNames = {
-        "GameMapConfiguration"
+
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(GameMapConfigurationComponent)
+
     };
 }

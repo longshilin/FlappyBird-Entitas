@@ -36,7 +36,7 @@ public sealed class PlayerMovementSystem : ReactiveSystem<InputEntity>
         if (player != null && player.Length == 1)
         {
             var e = player[0];
-            e.velocity.Value = Vector3.up * 2;
+            e.ReplaceVelocity(Vector3.up * 3f);
         }
     }
 }

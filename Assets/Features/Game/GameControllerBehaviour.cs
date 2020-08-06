@@ -3,9 +3,11 @@ using Zenject.Asteroids;
 
 public class GameControllerBehaviour : MonoBehaviour
 {
-    GameController _gameController;
+    [SerializeField] private GameConfiguration _configuration;
 
-    void Awake() => _gameController = new GameController(Contexts.sharedInstance);
+    private GameController _gameController;
+
+    void Awake() => _gameController = new GameController(Contexts.sharedInstance, _configuration);
     void Start() => _gameController.Initialize();
     void Update() => _gameController.Execute();
 }

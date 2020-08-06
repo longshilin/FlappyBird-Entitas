@@ -1,6 +1,11 @@
 ﻿    using Entitas;
+    using Entitas.CodeGeneration.Attributes;
 
-    public class PlayerComponent : IComponent
+    /// <summary>
+/// Represents the player
+/// </summary>
+[Game, Unique, ComponentName("Player")]
+public class PlayerComponent : IComponent
     {
         
     }

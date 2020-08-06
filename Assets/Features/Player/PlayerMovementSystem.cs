@@ -2,6 +2,9 @@
 using Entitas;
 using UnityEngine;
 
+/// <summary>
+/// Handles player entity movement logic
+/// </summary>
 public sealed class PlayerMovementSystem : ReactiveSystem<InputEntity>
 {
     readonly Contexts _contexts;
@@ -29,14 +32,15 @@ public sealed class PlayerMovementSystem : ReactiveSystem<InputEntity>
         return entity.hasMouseDown;
     }
 
+    /// <summary>
+    /// Adds upward velocity to the player
+    /// </summary>
+    /// <param name="entities"></param>
     protected override void Execute(List<InputEntity> entities)
     {
-        var player = _contexts.game.GetEntities(GameMatcher.Player);
+        var player = _contexts.game.playerEntity;
+        var config = _contexts.configuration.gameConfiguration;
 
-        if (player != null && player.Length == 1)
-        {
-            var e = player[0];
-            e.ReplaceVelocity(Vector3.up * 3f);
-        }
+        player.ReplaceVelocity(Vector3.up * config.value.PlayerUpwardsVelocity);
     }
 }

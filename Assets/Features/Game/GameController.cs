@@ -1,11 +1,13 @@
-﻿using Entitas;
+﻿using Configuration;
+using Entitas;
 
 public class GameController
 {
     readonly Systems _systems;
 
-    public GameController(Contexts contexts)
+    public GameController(Contexts contexts, IGameConfiguration configuration)
     {
+        contexts.configuration.SetGameConfiguration(configuration);
         _systems = new GameSystems(contexts);
     }
 

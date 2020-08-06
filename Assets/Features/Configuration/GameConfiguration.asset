@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: GameConfiguration
   m_EditorClassIdentifier: 
   _playerUpwardsVelocity: 3
-  _pipeSpawnInterval: 1.5
+  _pipeSpawnInterval: 2
+  _pipeLifetime: 2
+  _pipeOrigin: 5
+  _pipeMovementSpeed: 2.5

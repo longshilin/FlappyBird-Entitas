@@ -1,4 +1,5 @@
-﻿using Entitas;
+﻿using Configuration;
+using Entitas;
 using UnityEngine;
 
 namespace Pipe
@@ -15,7 +16,27 @@ namespace Pipe
 
         public void Execute()
         {
+            var configuration = _contexts.configuration.gameConfiguration;
+
             _time += Time.deltaTime;
+
+            if (_time > configuration.value.PipeSpawnInterval)
+            {
+                CreatePipe(configuration.value);
+                _time = 0f;
+            }
+        }
+
+        private void CreatePipe(IGameConfiguration configuration)
+        {
+            var entity = _contexts.game.CreateEntity();
+
+            entity.isPipe = true;
+
+            entity.AddPosition(Vector3.right * configuration.PipeOrigin);
+            entity.AddRotation(Quaternion.identity);
+            entity.AddScale(Vector3.one);
+            entity.AddAsset("Pipe");
         }
     }
 }

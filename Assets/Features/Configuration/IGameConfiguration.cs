@@ -7,5 +7,8 @@ namespace Configuration
     {
         float PlayerUpwardsVelocity { get; }
         float PipeSpawnInterval { get; }
+        float PipeLifetime { get; }
+        float PipeOrigin { get; }
+        float PipeMovementSpeed { get; }
     }
 }

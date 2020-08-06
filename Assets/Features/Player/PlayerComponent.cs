@@ -1,11 +1,10 @@
-﻿    using Entitas;
-    using Entitas.CodeGeneration.Attributes;
+﻿using Entitas;
+using Entitas.CodeGeneration.Attributes;
 
-    /// <summary>
+/// <summary>
 /// Represents the player
 /// </summary>
 [Game, Unique, ComponentName("Player")]
 public class PlayerComponent : IComponent
-    {
-        
-    }
+{
+}

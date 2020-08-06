@@ -2,7 +2,7 @@
 using Entitas;
 using UnityEngine;
 
-public class PlayerSystem : ReactiveSystem<GameEntity>, IInitializeSystem
+public class PlayerSpawnSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 {
     readonly Contexts _contexts;
 
@@ -33,15 +33,15 @@ public class PlayerSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         entity.AddAsset("Bird");
     }
 
-    public PlayerSystem(IContext<GameEntity> context) : base(context)
+    public PlayerSpawnSystem(IContext<GameEntity> context) : base(context)
     {
     }
 
-    public PlayerSystem(ICollector<GameEntity> collector) : base(collector)
+    public PlayerSpawnSystem(ICollector<GameEntity> collector) : base(collector)
     {
     }
 
-    public PlayerSystem(Contexts contexts) : base(contexts.game)
+    public PlayerSpawnSystem(Contexts contexts) : base(contexts.game)
     {
         _contexts = contexts;
     }

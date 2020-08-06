@@ -1,10 +1,16 @@
-﻿public sealed class GameSystems : Feature
+﻿using Pipe;
+
+public sealed class GameSystems : Feature
 {
     public GameSystems(Contexts contexts)
     {
         // player
-        Add(new PlayerSystem(contexts));
+        Add(new PlayerSpawnSystem(contexts));
         Add(new PlayerMovementSystem(contexts));
+
+        // environment
+        Add(new PipeSpawnSystem(contexts));
+        Add(new PipeMovementSystem(contexts));
 
         // view
         Add(new SyncPositionSystem(contexts));

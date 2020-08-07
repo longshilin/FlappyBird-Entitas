@@ -8,34 +8,38 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Asset = 0;
-    public const int Collision = 1;
-    public const int CollisionListener = 2;
-    public const int Destroyed = 3;
-    public const int DestroyedListener = 4;
-    public const int LifeTime = 5;
-    public const int Pausable = 6;
-    public const int Pipe = 7;
-    public const int Player = 8;
-    public const int Position = 9;
-    public const int PositionListener = 10;
-    public const int Rotation = 11;
-    public const int RotationListener = 12;
-    public const int Scale = 13;
-    public const int ScaleListener = 14;
-    public const int SyncPosition = 15;
-    public const int Velocity = 16;
-    public const int VelocityListener = 17;
-    public const int View = 18;
+    public const int AnyGameLostListener = 0;
+    public const int Asset = 1;
+    public const int Collision = 2;
+    public const int CollisionListener = 3;
+    public const int Destroyed = 4;
+    public const int DestroyedListener = 5;
+    public const int GameLost = 6;
+    public const int LifeTime = 7;
+    public const int Pausable = 8;
+    public const int Pipe = 9;
+    public const int Player = 10;
+    public const int Position = 11;
+    public const int PositionListener = 12;
+    public const int Rotation = 13;
+    public const int RotationListener = 14;
+    public const int Scale = 15;
+    public const int ScaleListener = 16;
+    public const int SyncPosition = 17;
+    public const int Velocity = 18;
+    public const int VelocityListener = 19;
+    public const int View = 20;
 
-    public const int TotalComponents = 19;
+    public const int TotalComponents = 21;
 
     public static readonly string[] componentNames = {
+        "AnyGameLostListener",
         "Asset",
         "Collision",
         "CollisionListener",
         "Destroyed",
         "DestroyedListener",
+        "GameLost",
         "LifeTime",
         "Pausable",
         "Pipe",
@@ -53,11 +57,13 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(AnyGameLostListenerComponent),
         typeof(AssetComponent),
         typeof(CollisionComponent),
         typeof(CollisionListenerComponent),
         typeof(DestroyedComponent),
         typeof(DestroyedListenerComponent),
+        typeof(GameLostComponent),
         typeof(LifeTimeComponent),
         typeof(PausableComponent),
         typeof(PipeComponent),

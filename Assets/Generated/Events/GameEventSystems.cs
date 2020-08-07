@@ -9,12 +9,15 @@
 public sealed class GameEventSystems : Feature {
 
     public GameEventSystems(Contexts contexts) {
-        Add(new CollisionEventSystem(contexts)); // priority: 0
+        Add(new CollisionEnter2DEventSystem(contexts)); // priority: 0
         Add(new DestroyedEventSystem(contexts)); // priority: 0
         Add(new AnyGameLostEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0
         Add(new RotationEventSystem(contexts)); // priority: 0
         Add(new ScaleEventSystem(contexts)); // priority: 0
+        Add(new Trigger2DEventSystem(contexts)); // priority: 0
+        Add(new TriggerEnter2DEventSystem(contexts)); // priority: 0
+        Add(new TriggerExit2DEventSystem(contexts)); // priority: 0
         Add(new VelocityEventSystem(contexts)); // priority: 0
     }
 }

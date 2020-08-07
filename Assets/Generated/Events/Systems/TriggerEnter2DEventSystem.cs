@@ -6,31 +6,31 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public sealed class CollisionEventSystem : Entitas.ReactiveSystem<GameEntity> {
+public sealed class TriggerEnter2DEventSystem : Entitas.ReactiveSystem<GameEntity> {
 
-    readonly System.Collections.Generic.List<ICollisionListener> _listenerBuffer;
+    readonly System.Collections.Generic.List<ITriggerEnter2DListener> _listenerBuffer;
 
-    public CollisionEventSystem(Contexts contexts) : base(contexts.game) {
-        _listenerBuffer = new System.Collections.Generic.List<ICollisionListener>();
+    public TriggerEnter2DEventSystem(Contexts contexts) : base(contexts.game) {
+        _listenerBuffer = new System.Collections.Generic.List<ITriggerEnter2DListener>();
     }
 
     protected override Entitas.ICollector<GameEntity> GetTrigger(Entitas.IContext<GameEntity> context) {
         return Entitas.CollectorContextExtension.CreateCollector(
-            context, Entitas.TriggerOnEventMatcherExtension.Added(GameMatcher.Collision)
+            context, Entitas.TriggerOnEventMatcherExtension.Added(GameMatcher.TriggerEnter2D)
         );
     }
 
     protected override bool Filter(GameEntity entity) {
-        return entity.hasCollision && entity.hasCollisionListener;
+        return entity.hasTriggerEnter2D && entity.hasTriggerEnter2DListener;
     }
 
     protected override void Execute(System.Collections.Generic.List<GameEntity> entities) {
         foreach (var e in entities) {
-            var component = e.collision;
+            var component = e.triggerEnter2D;
             _listenerBuffer.Clear();
-            _listenerBuffer.AddRange(e.collisionListener.value);
+            _listenerBuffer.AddRange(e.triggerEnter2DListener.value);
             foreach (var listener in _listenerBuffer) {
-                listener.OnCollision(e, component.Value);
+                listener.OnTriggerEnter2D(e, component.Value);
             }
         }
     }

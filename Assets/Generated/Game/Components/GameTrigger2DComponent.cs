@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public CollisionComponent collision { get { return (CollisionComponent)GetComponent(GameComponentsLookup.Collision); } }
-    public bool hasCollision { get { return HasComponent(GameComponentsLookup.Collision); } }
+    public Trigger2DComponent trigger2D { get { return (Trigger2DComponent)GetComponent(GameComponentsLookup.Trigger2D); } }
+    public bool hasTrigger2D { get { return HasComponent(GameComponentsLookup.Trigger2D); } }
 
-    public void AddCollision(UnityEngine.GameObject newValue) {
-        var index = GameComponentsLookup.Collision;
-        var component = (CollisionComponent)CreateComponent(index, typeof(CollisionComponent));
+    public void AddTrigger2D(UnityEngine.Collider2D newValue) {
+        var index = GameComponentsLookup.Trigger2D;
+        var component = (Trigger2DComponent)CreateComponent(index, typeof(Trigger2DComponent));
         component.Value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceCollision(UnityEngine.GameObject newValue) {
-        var index = GameComponentsLookup.Collision;
-        var component = (CollisionComponent)CreateComponent(index, typeof(CollisionComponent));
+    public void ReplaceTrigger2D(UnityEngine.Collider2D newValue) {
+        var index = GameComponentsLookup.Trigger2D;
+        var component = (Trigger2DComponent)CreateComponent(index, typeof(Trigger2DComponent));
         component.Value = newValue;
         ReplaceComponent(index, component);
     }
 
-    public void RemoveCollision() {
-        RemoveComponent(GameComponentsLookup.Collision);
+    public void RemoveTrigger2D() {
+        RemoveComponent(GameComponentsLookup.Trigger2D);
     }
 }
 
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherCollision;
+    static Entitas.IMatcher<GameEntity> _matcherTrigger2D;
 
-    public static Entitas.IMatcher<GameEntity> Collision {
+    public static Entitas.IMatcher<GameEntity> Trigger2D {
         get {
-            if (_matcherCollision == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Collision);
+            if (_matcherTrigger2D == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Trigger2D);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherCollision = matcher;
+                _matcherTrigger2D = matcher;
             }
 
-            return _matcherCollision;
+            return _matcherTrigger2D;
         }
     }
 }

@@ -20,19 +20,19 @@ public class PlayerCollisionSystem : ReactiveSystem<GameEntity>
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return context.CreateCollector(GameMatcher.Collision);
+        return context.CreateCollector(GameMatcher.CollisionEnter2D);
     }
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasCollision && entity.isPlayer;
+        return entity.hasCollisionEnter2D && entity.isPlayer;
     }
 
     protected override void Execute(List<GameEntity> entities)
     {
         var player = _contexts.game.playerEntity;
 
-        if (player.hasCollision && player.collision.Value != null)
+        if (player.hasCollisionEnter2D && player.collisionEnter2D.Value != null)
         {
             var pausables = _contexts.game.GetGroup(GameMatcher.Pausable);
 

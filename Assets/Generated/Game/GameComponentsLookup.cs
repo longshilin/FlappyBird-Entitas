@@ -10,8 +10,8 @@ public static class GameComponentsLookup {
 
     public const int AnyGameLostListener = 0;
     public const int Asset = 1;
-    public const int Collision = 2;
-    public const int CollisionListener = 3;
+    public const int CollisionEnter2D = 2;
+    public const int CollisionEnter2DListener = 3;
     public const int Destroyed = 4;
     public const int DestroyedListener = 5;
     public const int GameLost = 6;
@@ -26,17 +26,23 @@ public static class GameComponentsLookup {
     public const int Scale = 15;
     public const int ScaleListener = 16;
     public const int SyncPosition = 17;
-    public const int Velocity = 18;
-    public const int VelocityListener = 19;
-    public const int View = 20;
+    public const int Trigger2D = 18;
+    public const int Trigger2DListener = 19;
+    public const int TriggerEnter2D = 20;
+    public const int TriggerEnter2DListener = 21;
+    public const int TriggerExit2D = 22;
+    public const int TriggerExit2DListener = 23;
+    public const int Velocity = 24;
+    public const int VelocityListener = 25;
+    public const int View = 26;
 
-    public const int TotalComponents = 21;
+    public const int TotalComponents = 27;
 
     public static readonly string[] componentNames = {
         "AnyGameLostListener",
         "Asset",
-        "Collision",
-        "CollisionListener",
+        "CollisionEnter2D",
+        "CollisionEnter2DListener",
         "Destroyed",
         "DestroyedListener",
         "GameLost",
@@ -51,6 +57,12 @@ public static class GameComponentsLookup {
         "Scale",
         "ScaleListener",
         "SyncPosition",
+        "Trigger2D",
+        "Trigger2DListener",
+        "TriggerEnter2D",
+        "TriggerEnter2DListener",
+        "TriggerExit2D",
+        "TriggerExit2DListener",
         "Velocity",
         "VelocityListener",
         "View"
@@ -59,8 +71,8 @@ public static class GameComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(AnyGameLostListenerComponent),
         typeof(AssetComponent),
-        typeof(CollisionComponent),
-        typeof(CollisionListenerComponent),
+        typeof(CollisionEnter2DComponent),
+        typeof(CollisionEnter2DListenerComponent),
         typeof(DestroyedComponent),
         typeof(DestroyedListenerComponent),
         typeof(GameLostComponent),
@@ -75,6 +87,12 @@ public static class GameComponentsLookup {
         typeof(ScaleComponent),
         typeof(ScaleListenerComponent),
         typeof(SyncPositionComponent),
+        typeof(Trigger2DComponent),
+        typeof(Trigger2DListenerComponent),
+        typeof(TriggerEnter2DComponent),
+        typeof(TriggerEnter2DListenerComponent),
+        typeof(TriggerExit2DComponent),
+        typeof(TriggerExit2DListenerComponent),
         typeof(VelocityComponent),
         typeof(VelocityListenerComponent),
         typeof(ViewComponent)

@@ -7,6 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 [Entitas.CodeGeneration.Attributes.DontGenerate(false)]
-public sealed class CollisionListenerComponent : Entitas.IComponent {
-    public System.Collections.Generic.List<ICollisionListener> value;
+public sealed class TriggerExit2DListenerComponent : Entitas.IComponent {
+    public System.Collections.Generic.List<ITriggerExit2DListener> value;
 }

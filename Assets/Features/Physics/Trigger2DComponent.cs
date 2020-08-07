@@ -3,7 +3,7 @@ using Entitas.CodeGeneration.Attributes;
 using UnityEngine;
 
 [Event(EventTarget.Self)]
-public class CollisionComponent : IComponent
+public class Trigger2DComponent : IComponent
 {
-    public GameObject Value;
+    public Collider2D Value;
 }

@@ -14,13 +14,6 @@ public class CollisionReporter : MonoBehaviour
     {
         var e = _listener.Entity;
 
-        if (e.hasCollision)
-        {
-            e.ReplaceCollision(other.gameObject);
-        }
-        else
-        {
-            e.AddCollision(other.gameObject);
-        }
+        e.ReplaceCollisionEnter2D(other);
     }
 }

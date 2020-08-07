@@ -10,5 +10,7 @@ namespace Configuration
         float PipeLifetime { get; }
         float PipeOrigin { get; }
         float PipeMovementSpeed { get; }
+
+        float PipeRandomHeightRange { get; }
     }
 }

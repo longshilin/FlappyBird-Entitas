@@ -33,7 +33,11 @@ namespace Pipe
 
             entity.isPipe = true;
 
-            entity.AddPosition(Vector3.right * configuration.PipeOrigin);
+            entity.AddPosition
+            (
+                Vector3.right * configuration.PipeOrigin +
+                Vector3.up * Random.Range(-configuration.PipeRandomHeightRange, configuration.PipeRandomHeightRange)
+            );
             entity.AddRotation(Quaternion.identity);
             entity.AddScale(Vector3.one);
             entity.AddAsset("Pipe");

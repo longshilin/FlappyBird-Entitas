@@ -38,6 +38,8 @@ public sealed class PlayerMovementSystem : ReactiveSystem<InputEntity>
     /// <param name="entities"></param>
     protected override void Execute(List<InputEntity> entities)
     {
+        if (!_contexts.game.isGameStarted) return;
+
         var player = _contexts.game.playerEntity;
         var config = _contexts.configuration.gameConfiguration;
 

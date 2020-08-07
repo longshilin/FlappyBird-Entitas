@@ -4,10 +4,13 @@ using Entitas;
 public class GameController
 {
     readonly Systems _systems;
+    readonly Contexts _contexts;
 
     public GameController(Contexts contexts, IGameConfiguration configuration)
     {
         contexts.configuration.SetGameConfiguration(configuration);
+
+        _contexts = contexts;
         _systems = new GameSystems(contexts);
     }
 

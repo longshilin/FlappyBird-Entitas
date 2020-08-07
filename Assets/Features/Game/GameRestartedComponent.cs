@@ -2,6 +2,6 @@
 using Entitas.CodeGeneration.Attributes;
 
 [Unique, Event(EventTarget.Any)]
-public class GameStartedComponent : IComponent
+public class GameRestartedComponent : IComponent
 {
 }

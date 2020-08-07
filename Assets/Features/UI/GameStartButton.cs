@@ -31,8 +31,6 @@ public class GameStartButton : MonoBehaviour
         }
 
         // create game start event
-        var e = contexts.game.CreateEntity();
-        e.isGameEvent = true;
-        e.isGameStarted = true;
+        contexts.game.isGameStarted = true;
     }
 }

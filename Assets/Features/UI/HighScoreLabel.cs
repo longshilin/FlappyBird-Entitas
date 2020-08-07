@@ -2,11 +2,9 @@
 using UnityEngine.UI;
 
 /// <summary>
-/// This behavior handles updating an UI text with
-/// the current player score
+/// Displays the current high score in a text label
 /// </summary>
-[RequireComponent(typeof(Text))]
-public class GameScoreLabel : MonoBehaviour, IAnyScoreListener, IAnyGameStartedListener
+public class HighScoreLabel : MonoBehaviour, IAnyScoreListener
 {
     private Text _label;
 
@@ -17,16 +15,15 @@ public class GameScoreLabel : MonoBehaviour, IAnyScoreListener, IAnyGameStartedL
         var contexts = Contexts.sharedInstance;
         var e = contexts.game.CreateEntity();
         e.AddAnyScoreListener(this);
-        e.AddAnyGameStartedListener(this);
+
+        // set the initial value
+        OnAnyScore(null, 0);
     }
 
     public void OnAnyScore(GameEntity entity, int value)
     {
-        _label.text = value.ToString();
-    }
+        var highScore = PlayerPrefs.GetInt("HighScore", 0);
 
-    public void OnAnyGameStarted(GameEntity entity)
-    {
-        _label.text = "0";
+        _label.text = (value > highScore ? value : highScore).ToString();
     }
 }

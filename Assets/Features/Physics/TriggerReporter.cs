@@ -14,12 +14,16 @@ public class TriggerReporter : MonoBehaviour
     {
         var e = _listener.Entity;
 
+        if (!e.isEnabled) return;
+
         e.ReplaceTriggerEnter2D(other);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         var e = _listener.Entity;
+
+        if (!e.isEnabled) return;
 
         e.ReplaceTriggerExit2D(other);
     }

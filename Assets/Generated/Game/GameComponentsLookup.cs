@@ -9,49 +9,53 @@
 public static class GameComponentsLookup {
 
     public const int AnyGameLostListener = 0;
-    public const int AnyScoreListener = 1;
-    public const int Asset = 2;
-    public const int CollisionEnter2D = 3;
-    public const int CollisionEnter2DListener = 4;
-    public const int Destroyed = 5;
-    public const int DestroyedListener = 6;
-    public const int GameEvent = 7;
-    public const int GameLost = 8;
-    public const int GameStarted = 9;
-    public const int LifeTime = 10;
-    public const int Pausable = 11;
-    public const int Pipe = 12;
-    public const int Player = 13;
-    public const int Position = 14;
-    public const int PositionListener = 15;
-    public const int Rotation = 16;
-    public const int RotationListener = 17;
-    public const int Scale = 18;
-    public const int ScaleListener = 19;
-    public const int Score = 20;
-    public const int SyncPosition = 21;
-    public const int Trigger2D = 22;
-    public const int Trigger2DListener = 23;
-    public const int TriggerEnter2D = 24;
-    public const int TriggerEnter2DListener = 25;
-    public const int TriggerExit2D = 26;
-    public const int TriggerExit2DListener = 27;
-    public const int Velocity = 28;
-    public const int VelocityListener = 29;
-    public const int View = 30;
+    public const int AnyGameRestartedListener = 1;
+    public const int AnyGameStartedListener = 2;
+    public const int AnyScoreListener = 3;
+    public const int Asset = 4;
+    public const int CollisionEnter2D = 5;
+    public const int CollisionEnter2DListener = 6;
+    public const int Destroyed = 7;
+    public const int DestroyedListener = 8;
+    public const int GameLost = 9;
+    public const int GameRestarted = 10;
+    public const int GameStarted = 11;
+    public const int LifeTime = 12;
+    public const int Pausable = 13;
+    public const int Pipe = 14;
+    public const int Player = 15;
+    public const int Position = 16;
+    public const int PositionListener = 17;
+    public const int Rotation = 18;
+    public const int RotationListener = 19;
+    public const int Scale = 20;
+    public const int ScaleListener = 21;
+    public const int Score = 22;
+    public const int SyncPosition = 23;
+    public const int Trigger2D = 24;
+    public const int Trigger2DListener = 25;
+    public const int TriggerEnter2D = 26;
+    public const int TriggerEnter2DListener = 27;
+    public const int TriggerExit2D = 28;
+    public const int TriggerExit2DListener = 29;
+    public const int Velocity = 30;
+    public const int VelocityListener = 31;
+    public const int View = 32;
 
-    public const int TotalComponents = 31;
+    public const int TotalComponents = 33;
 
     public static readonly string[] componentNames = {
         "AnyGameLostListener",
+        "AnyGameRestartedListener",
+        "AnyGameStartedListener",
         "AnyScoreListener",
         "Asset",
         "CollisionEnter2D",
         "CollisionEnter2DListener",
         "Destroyed",
         "DestroyedListener",
-        "GameEvent",
         "GameLost",
+        "GameRestarted",
         "GameStarted",
         "LifeTime",
         "Pausable",
@@ -78,14 +82,16 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(AnyGameLostListenerComponent),
+        typeof(AnyGameRestartedListenerComponent),
+        typeof(AnyGameStartedListenerComponent),
         typeof(AnyScoreListenerComponent),
         typeof(AssetComponent),
         typeof(CollisionEnter2DComponent),
         typeof(CollisionEnter2DListenerComponent),
         typeof(DestroyedComponent),
         typeof(DestroyedListenerComponent),
-        typeof(GameEventComponent),
         typeof(GameLostComponent),
+        typeof(GameRestartedComponent),
         typeof(GameStartedComponent),
         typeof(LifeTimeComponent),
         typeof(PausableComponent),

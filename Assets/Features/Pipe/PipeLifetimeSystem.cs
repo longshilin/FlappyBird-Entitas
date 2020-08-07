@@ -12,6 +12,8 @@ public class PipeLifetimeSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (!_contexts.game.isGameStarted) return;
+
         var configuration = _contexts.configuration.gameConfiguration.value;
         var group = _contexts.game.GetGroup(GameMatcher.Pipe);
 

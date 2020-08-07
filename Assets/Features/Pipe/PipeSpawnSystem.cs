@@ -5,22 +5,22 @@ using UnityEngine;
 
 namespace Pipe
 {
-    public sealed class PipeSpawnSystem : IExecuteSystem
+    public sealed class PipeSpawnSystem : IExecuteSystem, IAnyGameRestartedListener
     {
         readonly Contexts _contexts;
         private float _time;
-        private bool _gameRunning;
 
         public PipeSpawnSystem(Contexts contexts)
         {
             _contexts = contexts;
+
+            var restartListener = _contexts.game.CreateEntity();
+            restartListener.AddAnyGameRestartedListener(this);
         }
 
         public void Execute()
         {
-            _gameRunning = _contexts.game.GetGroup(GameMatcher.GameStarted)?.count > 0;
-
-            if (!_gameRunning) return;
+            if (!_contexts.game.isGameStarted) return;
 
             var configuration = _contexts.configuration.gameConfiguration;
             var player = _contexts.game.playerEntity;
@@ -54,6 +54,11 @@ namespace Pipe
             entity.AddLifeTime(configuration.PipeLifetime);
             entity.AddPausable(false);
             entity.AddAsset("Pipe");
+        }
+
+        public void OnAnyGameRestarted(GameEntity entity)
+        {
+            _time = 0;
         }
     }
 }

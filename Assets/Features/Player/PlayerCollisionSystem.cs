@@ -41,9 +41,8 @@ public class PlayerCollisionSystem : ReactiveSystem<GameEntity>
                 pausable.ReplacePausable(true);
             }
 
-            var e = _contexts.game.CreateEntity();
-            e.isGameEvent = true;
-            e.isGameLost = true;
+            _contexts.game.isGameLost = true;
+            _contexts.game.isGameStarted = false;
         }
     }
 }

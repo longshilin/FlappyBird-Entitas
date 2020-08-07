@@ -2,12 +2,20 @@
 using Entitas;
 using UnityEngine;
 
-public class PlayerSpawnSystem : ReactiveSystem<GameEntity>
+public sealed class PlayerSpawnSystem : ReactiveSystem<GameEntity>
 {
     readonly Contexts _contexts;
 
     public void CreatePlayer()
     {
+        // check if we still have a player, remaning from game restart
+        var player = _contexts.game.playerEntity;
+
+        if (player != null && player.isDestroyed)
+        {
+            player.isPlayer = false;
+        }
+
         var entity = _contexts.game.CreateEntity();
         var configuration = _contexts.configuration.gameConfiguration.value;
 
@@ -28,23 +36,16 @@ public class PlayerSpawnSystem : ReactiveSystem<GameEntity>
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return context.CreateCollector(GameMatcher.GameEvent);
+        return context.CreateCollector(GameMatcher.GameStarted);
     }
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.isGameEvent && entity.isGameStarted;
+        return entity.isGameStarted;
     }
 
     protected override void Execute(List<GameEntity> entities)
     {
-        foreach (var gameEntity in entities)
-        {
-            if (gameEntity.isGameStarted)
-            {
-                CreatePlayer();
-                return;
-            }
-        }
+        CreatePlayer();
     }
 }

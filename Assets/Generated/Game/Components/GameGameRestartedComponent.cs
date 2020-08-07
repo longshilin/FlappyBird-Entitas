@@ -8,15 +8,15 @@
 //------------------------------------------------------------------------------
 public partial class GameContext {
 
-    public GameEntity gameStartedEntity { get { return GetGroup(GameMatcher.GameStarted).GetSingleEntity(); } }
+    public GameEntity gameRestartedEntity { get { return GetGroup(GameMatcher.GameRestarted).GetSingleEntity(); } }
 
-    public bool isGameStarted {
-        get { return gameStartedEntity != null; }
+    public bool isGameRestarted {
+        get { return gameRestartedEntity != null; }
         set {
-            var entity = gameStartedEntity;
+            var entity = gameRestartedEntity;
             if (value != (entity != null)) {
                 if (value) {
-                    CreateEntity().isGameStarted = true;
+                    CreateEntity().isGameRestarted = true;
                 } else {
                     entity.Destroy();
                 }
@@ -35,18 +35,18 @@ public partial class GameContext {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly GameStartedComponent gameStartedComponent = new GameStartedComponent();
+    static readonly GameRestartedComponent gameRestartedComponent = new GameRestartedComponent();
 
-    public bool isGameStarted {
-        get { return HasComponent(GameComponentsLookup.GameStarted); }
+    public bool isGameRestarted {
+        get { return HasComponent(GameComponentsLookup.GameRestarted); }
         set {
-            if (value != isGameStarted) {
-                var index = GameComponentsLookup.GameStarted;
+            if (value != isGameRestarted) {
+                var index = GameComponentsLookup.GameRestarted;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : gameStartedComponent;
+                            : gameRestartedComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -67,17 +67,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherGameStarted;
+    static Entitas.IMatcher<GameEntity> _matcherGameRestarted;
 
-    public static Entitas.IMatcher<GameEntity> GameStarted {
+    public static Entitas.IMatcher<GameEntity> GameRestarted {
         get {
-            if (_matcherGameStarted == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.GameStarted);
+            if (_matcherGameRestarted == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.GameRestarted);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherGameStarted = matcher;
+                _matcherGameRestarted = matcher;
             }
 
-            return _matcherGameStarted;
+            return _matcherGameRestarted;
         }
     }
 }

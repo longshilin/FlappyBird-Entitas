@@ -25,10 +25,13 @@ public class UnityView : MonoBehaviour, IUnityView, IPositionListener, IRotation
         set => transform.localScale = value;
     }
 
+    public GameEntity Entity => _entity;
+
     public virtual void Link(IEntity entity)
     {
         gameObject.Link(entity);
         _entity = (GameEntity)entity;
+
         // add components
         _entity.AddPositionListener(this);
         _entity.AddDestroyedListener(this);

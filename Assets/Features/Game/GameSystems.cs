@@ -19,7 +19,8 @@ public sealed class GameSystems : Feature
 
         // events
         Add(new GameEventSystems(contexts));
-        
+        Add(new PlayerCollisionSystem(contexts));
+
         // input
         Add(new InputSystem(contexts));
     }

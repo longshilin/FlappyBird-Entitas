@@ -1,4 +1,6 @@
-﻿public class PlayerView : Rigidbody2DView
-{
+﻿using Entitas;
+using UnityEngine;
 
+public class PlayerView : Rigidbody2DView
+{
 }

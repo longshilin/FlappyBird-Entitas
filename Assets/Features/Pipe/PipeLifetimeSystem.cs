@@ -19,6 +19,8 @@ public class PipeLifetimeSystem : IExecuteSystem
         {
             if (!gameEntity.isPipe) continue;
 
+            if (gameEntity.pausable.Value) continue;
+
             var lifetime = gameEntity.lifeTime.Value;
             lifetime -= Time.deltaTime;
 

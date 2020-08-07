@@ -1,6 +1,5 @@
 ﻿using Entitas;
 
-public interface IView
+public interface IView : ILinked
 {
-    void Link(IEntity entity);
 }

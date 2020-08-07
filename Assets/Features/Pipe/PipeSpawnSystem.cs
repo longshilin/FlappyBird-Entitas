@@ -17,8 +17,12 @@ namespace Pipe
         public void Execute()
         {
             var configuration = _contexts.configuration.gameConfiguration;
+            var player = _contexts.game.playerEntity;
 
-            _time += Time.deltaTime;
+            if (!player.pausable.Value)
+            {
+                _time += Time.deltaTime;
+            }
 
             if (_time > configuration.value.PipeSpawnInterval)
             {
@@ -38,10 +42,12 @@ namespace Pipe
                 Vector3.right * configuration.PipeOrigin +
                 Vector3.up * Random.Range(-configuration.PipeRandomHeightRange, configuration.PipeRandomHeightRange)
             );
+
             entity.AddRotation(Quaternion.identity);
             entity.AddScale(Vector3.one);
-            entity.AddAsset("Pipe");
             entity.AddLifeTime(configuration.PipeLifetime);
+            entity.AddPausable(false);
+            entity.AddAsset("Pipe");
         }
     }
 }

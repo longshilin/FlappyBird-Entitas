@@ -21,6 +21,8 @@ namespace Pipe
             {
                 if (!gameEntity.isPipe) continue;
 
+                if (gameEntity.pausable.Value) continue;
+
                 var pos = gameEntity.position.Value;
                 pos -= Vector3.right * Time.deltaTime * configuration.PipeMovementSpeed;
 

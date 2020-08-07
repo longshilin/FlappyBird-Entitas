@@ -30,6 +30,7 @@ public class PlayerSpawnSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         entity.AddPosition(Vector3.zero);
         entity.AddRotation(Quaternion.identity);
         entity.AddScale(Vector3.one);
+        entity.AddPausable(false);
         entity.AddAsset("Bird");
     }
 

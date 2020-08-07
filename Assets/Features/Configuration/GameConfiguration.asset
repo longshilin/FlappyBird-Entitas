@@ -17,3 +17,4 @@ MonoBehaviour:
   _pipeLifetime: 5
   _pipeOrigin: 5
   _pipeMovementSpeed: 2.25
+  _pipeRandomHeightRange: 1

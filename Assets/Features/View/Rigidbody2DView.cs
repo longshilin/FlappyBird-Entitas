@@ -33,26 +33,25 @@ public class Rigidbody2DView : UnityView, ISyncPosition, IVelocityListener
     public override void Link(IEntity entity)
     {
         base.Link(entity);
-        var e = (GameEntity) entity;
-        base.Position = e.position.Value;
+        base.Position = _entity.position.Value;
 
-        if (e.hasPositionListener)
+        if (_entity.hasPositionListener)
         {
-            e.RemovePositionListener();
+            _entity.RemovePositionListener();
         }
 
-        if (e.hasRotationListener)
+        if (_entity.hasRotationListener)
         {
-            e.RemoveRotationListener();
+            _entity.RemoveRotationListener();
         }
 
-        if (e.hasScaleListener)
+        if (_entity.hasScaleListener)
         {
-            e.RemoveScaleListener();
+            _entity.RemoveScaleListener();
         }
 
-        e.AddSyncPosition(this);
-        e.AddVelocityListener(this);
+        _entity.AddSyncPosition(this);
+        _entity.AddVelocityListener(this);
     }
 
     public void OnVelocity(GameEntity entity, Vector3 value)

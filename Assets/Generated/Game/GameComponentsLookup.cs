@@ -9,29 +9,35 @@
 public static class GameComponentsLookup {
 
     public const int Asset = 0;
-    public const int Destroyed = 1;
-    public const int DestroyedListener = 2;
-    public const int LifeTime = 3;
-    public const int Pipe = 4;
-    public const int Player = 5;
-    public const int Position = 6;
-    public const int PositionListener = 7;
-    public const int Rotation = 8;
-    public const int RotationListener = 9;
-    public const int Scale = 10;
-    public const int ScaleListener = 11;
-    public const int SyncPosition = 12;
-    public const int Velocity = 13;
-    public const int VelocityListener = 14;
-    public const int View = 15;
+    public const int Collision = 1;
+    public const int CollisionListener = 2;
+    public const int Destroyed = 3;
+    public const int DestroyedListener = 4;
+    public const int LifeTime = 5;
+    public const int Pausable = 6;
+    public const int Pipe = 7;
+    public const int Player = 8;
+    public const int Position = 9;
+    public const int PositionListener = 10;
+    public const int Rotation = 11;
+    public const int RotationListener = 12;
+    public const int Scale = 13;
+    public const int ScaleListener = 14;
+    public const int SyncPosition = 15;
+    public const int Velocity = 16;
+    public const int VelocityListener = 17;
+    public const int View = 18;
 
-    public const int TotalComponents = 16;
+    public const int TotalComponents = 19;
 
     public static readonly string[] componentNames = {
         "Asset",
+        "Collision",
+        "CollisionListener",
         "Destroyed",
         "DestroyedListener",
         "LifeTime",
+        "Pausable",
         "Pipe",
         "Player",
         "Position",
@@ -48,9 +54,12 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(AssetComponent),
+        typeof(CollisionComponent),
+        typeof(CollisionListenerComponent),
         typeof(DestroyedComponent),
         typeof(DestroyedListenerComponent),
         typeof(LifeTimeComponent),
+        typeof(PausableComponent),
         typeof(PipeComponent),
         typeof(PlayerComponent),
         typeof(PositionComponent),

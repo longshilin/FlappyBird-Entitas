@@ -5,9 +5,11 @@ using UnityEngine;
 public sealed class ViewSystem : ReactiveSystem<GameEntity>
 {
     readonly Transform _parent;
+    private Contexts _contexts;
 
     public ViewSystem(Contexts contexts) : base(contexts.game)
     {
+        _contexts = contexts;
         _parent = new GameObject("Views").transform;
     }
 

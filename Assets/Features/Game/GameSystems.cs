@@ -7,6 +7,8 @@ public sealed class GameSystems : Feature
         // player
         Add(new PlayerSpawnSystem(contexts));
         Add(new PlayerMovementSystem(contexts));
+        Add(new PlayerCollisionSystem(contexts));
+        Add(new PlayerScoreSystem(contexts));
 
         // environment
         Add(new PipeSpawnSystem(contexts));
@@ -19,7 +21,6 @@ public sealed class GameSystems : Feature
 
         // events
         Add(new GameEventSystems(contexts));
-        Add(new PlayerCollisionSystem(contexts));
 
         // input
         Add(new InputSystem(contexts));

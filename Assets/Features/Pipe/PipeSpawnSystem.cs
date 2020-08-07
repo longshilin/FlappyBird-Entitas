@@ -1,4 +1,5 @@
-﻿using Configuration;
+﻿using System.Collections.Generic;
+using Configuration;
 using Entitas;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ namespace Pipe
     {
         readonly Contexts _contexts;
         private float _time;
+        private bool _gameRunning;
 
         public PipeSpawnSystem(Contexts contexts)
         {
@@ -16,6 +18,10 @@ namespace Pipe
 
         public void Execute()
         {
+            _gameRunning = _contexts.game.GetGroup(GameMatcher.GameStarted)?.count > 0;
+
+            if (!_gameRunning) return;
+
             var configuration = _contexts.configuration.gameConfiguration;
             var player = _contexts.game.playerEntity;
 

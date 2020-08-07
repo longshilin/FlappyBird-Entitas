@@ -15,30 +15,32 @@ public static class GameComponentsLookup {
     public const int CollisionEnter2DListener = 4;
     public const int Destroyed = 5;
     public const int DestroyedListener = 6;
-    public const int GameLost = 7;
-    public const int LifeTime = 8;
-    public const int Pausable = 9;
-    public const int Pipe = 10;
-    public const int Player = 11;
-    public const int Position = 12;
-    public const int PositionListener = 13;
-    public const int Rotation = 14;
-    public const int RotationListener = 15;
-    public const int Scale = 16;
-    public const int ScaleListener = 17;
-    public const int Score = 18;
-    public const int SyncPosition = 19;
-    public const int Trigger2D = 20;
-    public const int Trigger2DListener = 21;
-    public const int TriggerEnter2D = 22;
-    public const int TriggerEnter2DListener = 23;
-    public const int TriggerExit2D = 24;
-    public const int TriggerExit2DListener = 25;
-    public const int Velocity = 26;
-    public const int VelocityListener = 27;
-    public const int View = 28;
+    public const int GameEvent = 7;
+    public const int GameLost = 8;
+    public const int GameStarted = 9;
+    public const int LifeTime = 10;
+    public const int Pausable = 11;
+    public const int Pipe = 12;
+    public const int Player = 13;
+    public const int Position = 14;
+    public const int PositionListener = 15;
+    public const int Rotation = 16;
+    public const int RotationListener = 17;
+    public const int Scale = 18;
+    public const int ScaleListener = 19;
+    public const int Score = 20;
+    public const int SyncPosition = 21;
+    public const int Trigger2D = 22;
+    public const int Trigger2DListener = 23;
+    public const int TriggerEnter2D = 24;
+    public const int TriggerEnter2DListener = 25;
+    public const int TriggerExit2D = 26;
+    public const int TriggerExit2DListener = 27;
+    public const int Velocity = 28;
+    public const int VelocityListener = 29;
+    public const int View = 30;
 
-    public const int TotalComponents = 29;
+    public const int TotalComponents = 31;
 
     public static readonly string[] componentNames = {
         "AnyGameLostListener",
@@ -48,7 +50,9 @@ public static class GameComponentsLookup {
         "CollisionEnter2DListener",
         "Destroyed",
         "DestroyedListener",
+        "GameEvent",
         "GameLost",
+        "GameStarted",
         "LifeTime",
         "Pausable",
         "Pipe",
@@ -80,7 +84,9 @@ public static class GameComponentsLookup {
         typeof(CollisionEnter2DListenerComponent),
         typeof(DestroyedComponent),
         typeof(DestroyedListenerComponent),
+        typeof(GameEventComponent),
         typeof(GameLostComponent),
+        typeof(GameStartedComponent),
         typeof(LifeTimeComponent),
         typeof(PausableComponent),
         typeof(PipeComponent),

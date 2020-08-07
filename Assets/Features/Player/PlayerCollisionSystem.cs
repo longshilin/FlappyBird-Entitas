@@ -42,6 +42,7 @@ public class PlayerCollisionSystem : ReactiveSystem<GameEntity>
             }
 
             var e = _contexts.game.CreateEntity();
+            e.isGameEvent = true;
             e.isGameLost = true;
         }
     }

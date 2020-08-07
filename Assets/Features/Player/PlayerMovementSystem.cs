@@ -41,7 +41,7 @@ public sealed class PlayerMovementSystem : ReactiveSystem<InputEntity>
         var player = _contexts.game.playerEntity;
         var config = _contexts.configuration.gameConfiguration;
 
-        if (player.pausable.Value) return;
+        if (player == null || player.pausable.Value) return;
 
         player.ReplaceVelocity(Vector3.up * config.value.PlayerUpwardsVelocity);
     }

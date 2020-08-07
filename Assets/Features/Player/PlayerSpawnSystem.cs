@@ -2,25 +2,11 @@
 using Entitas;
 using UnityEngine;
 
-public class PlayerSpawnSystem : ReactiveSystem<GameEntity>, IInitializeSystem
+public class PlayerSpawnSystem : ReactiveSystem<GameEntity>
 {
     readonly Contexts _contexts;
 
-    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
-    {
-        return context.CreateCollector(GameMatcher.Player);
-    }
-
-    protected override bool Filter(GameEntity entity)
-    {
-        return entity.isPlayer;
-    }
-
-    protected override void Execute(List<GameEntity> entities)
-    {
-    }
-
-    public void Initialize()
+    public void CreatePlayer()
     {
         var entity = _contexts.game.CreateEntity();
 
@@ -34,16 +20,30 @@ public class PlayerSpawnSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         entity.AddAsset("Bird");
     }
 
-    public PlayerSpawnSystem(IContext<GameEntity> context) : base(context)
-    {
-    }
-
-    public PlayerSpawnSystem(ICollector<GameEntity> collector) : base(collector)
-    {
-    }
-
     public PlayerSpawnSystem(Contexts contexts) : base(contexts.game)
     {
         _contexts = contexts;
+    }
+
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+    {
+        return context.CreateCollector(GameMatcher.GameEvent);
+    }
+
+    protected override bool Filter(GameEntity entity)
+    {
+        return entity.isGameEvent && entity.isGameStarted;
+    }
+
+    protected override void Execute(List<GameEntity> entities)
+    {
+        foreach (var gameEntity in entities)
+        {
+            if (gameEntity.isGameStarted)
+            {
+                CreatePlayer();
+                return;
+            }
+        }
     }
 }

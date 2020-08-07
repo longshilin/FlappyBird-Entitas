@@ -11,25 +11,27 @@ public static class GameComponentsLookup {
     public const int Asset = 0;
     public const int Destroyed = 1;
     public const int DestroyedListener = 2;
-    public const int Pipe = 3;
-    public const int Player = 4;
-    public const int Position = 5;
-    public const int PositionListener = 6;
-    public const int Rotation = 7;
-    public const int RotationListener = 8;
-    public const int Scale = 9;
-    public const int ScaleListener = 10;
-    public const int SyncPosition = 11;
-    public const int Velocity = 12;
-    public const int VelocityListener = 13;
-    public const int View = 14;
+    public const int LifeTime = 3;
+    public const int Pipe = 4;
+    public const int Player = 5;
+    public const int Position = 6;
+    public const int PositionListener = 7;
+    public const int Rotation = 8;
+    public const int RotationListener = 9;
+    public const int Scale = 10;
+    public const int ScaleListener = 11;
+    public const int SyncPosition = 12;
+    public const int Velocity = 13;
+    public const int VelocityListener = 14;
+    public const int View = 15;
 
-    public const int TotalComponents = 15;
+    public const int TotalComponents = 16;
 
     public static readonly string[] componentNames = {
         "Asset",
         "Destroyed",
         "DestroyedListener",
+        "LifeTime",
         "Pipe",
         "Player",
         "Position",
@@ -48,6 +50,7 @@ public static class GameComponentsLookup {
         typeof(AssetComponent),
         typeof(DestroyedComponent),
         typeof(DestroyedListenerComponent),
+        typeof(LifeTimeComponent),
         typeof(PipeComponent),
         typeof(PlayerComponent),
         typeof(PositionComponent),

@@ -5,6 +5,8 @@ using View;
 
 public class UnityView : MonoBehaviour, IUnityView, IPositionListener, IRotationListener, IScaleListener, IDestroyedListener
 {
+    protected GameEntity _entity;
+
     public virtual Vector3 Position
     {
         get => transform.localPosition;
@@ -26,12 +28,12 @@ public class UnityView : MonoBehaviour, IUnityView, IPositionListener, IRotation
     public virtual void Link(IEntity entity)
     {
         gameObject.Link(entity);
-        var e = (GameEntity)entity;
+        _entity = (GameEntity)entity;
         // add components
-        e.AddPositionListener(this);
-        e.AddDestroyedListener(this);
+        _entity.AddPositionListener(this);
+        _entity.AddDestroyedListener(this);
 
-        var pos = e.position.Value;
+        var pos = _entity.position.Value;
         transform.localPosition = new Vector3(pos.x, pos.y);
     }
 
@@ -48,6 +50,8 @@ public class UnityView : MonoBehaviour, IUnityView, IPositionListener, IRotation
     protected virtual void Destroy()
     {
         gameObject.Unlink();
+
+        _entity.Destroy();
         Destroy(gameObject);
     }
 

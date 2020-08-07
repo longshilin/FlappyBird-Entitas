@@ -23,7 +23,7 @@ namespace Pipe
 
                 var pos = gameEntity.position.Value;
                 pos -= Vector3.right * Time.deltaTime * configuration.PipeMovementSpeed;
-                Debug.Log(pos.x);
+
                 gameEntity.ReplacePosition(pos);
             }
         }

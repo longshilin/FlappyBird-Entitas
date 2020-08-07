@@ -11,6 +11,7 @@ public sealed class GameSystems : Feature
         // environment
         Add(new PipeSpawnSystem(contexts));
         Add(new PipeMovementSystem(contexts));
+        Add(new PipeLifetimeSystem(contexts));
 
         // view
         Add(new SyncPositionSystem(contexts));

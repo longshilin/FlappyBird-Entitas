@@ -37,6 +37,7 @@ namespace Pipe
             entity.AddRotation(Quaternion.identity);
             entity.AddScale(Vector3.one);
             entity.AddAsset("Pipe");
+            entity.AddLifeTime(configuration.PipeLifetime);
         }
     }
 }

@@ -9,11 +9,12 @@ public class PlayerSpawnSystem : ReactiveSystem<GameEntity>
     public void CreatePlayer()
     {
         var entity = _contexts.game.CreateEntity();
+        var configuration = _contexts.configuration.gameConfiguration.value;
 
         entity.isPlayer = true;
 
         entity.AddVelocity(Vector3.zero);
-        entity.AddPosition(Vector3.zero);
+        entity.AddPosition(Vector3.right * configuration.PlayerSpawnOrigin);
         entity.AddRotation(Quaternion.identity);
         entity.AddScale(Vector3.one);
         entity.AddPausable(false);

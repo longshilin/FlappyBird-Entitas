@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Entitas;
-using Zenject.SpaceFighter;
 
 public class PlayerScoreSystem : ReactiveSystem<GameEntity>
 {

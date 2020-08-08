@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Zenject.Asteroids;
 
 public class GameControllerBehaviour : MonoBehaviour
 {

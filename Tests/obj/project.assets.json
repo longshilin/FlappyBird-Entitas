@@ -4,74 +4,11 @@
     ".NETCoreApp,Version=v3.1": {
       "Assembly-CSharp/1.0.0": {
         "type": "project",
-        "dependencies": {
-          "UniRx": "1.0.0",
-          "Zenject": "1.0.0",
-          "Zenject-Editor": "1.0.0",
-          "Zenject-PoolMonitor-Editor": "1.0.0",
-          "Zenject-ReflectionBaking-Editor": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Assembly-CSharp.dll": {}
         },
         "runtime": {
           "bin/placeholder/Assembly-CSharp.dll": {}
-        }
-      },
-      "UniRx/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/UniRx.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/UniRx.dll": {}
-        }
-      },
-      "Zenject/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/Zenject.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Zenject.dll": {}
-        }
-      },
-      "Zenject-Editor/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Zenject": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Zenject-Editor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Zenject-Editor.dll": {}
-        }
-      },
-      "Zenject-PoolMonitor-Editor/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Zenject": "1.0.0",
-          "Zenject-Editor": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Zenject-PoolMonitor-Editor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Zenject-PoolMonitor-Editor.dll": {}
-        }
-      },
-      "Zenject-ReflectionBaking-Editor/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Zenject": "1.0.0",
-          "Zenject-Editor": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Zenject-ReflectionBaking-Editor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Zenject-ReflectionBaking-Editor.dll": {}
         }
       }
     }
@@ -81,31 +18,6 @@
       "type": "project",
       "path": "../Assembly-CSharp.csproj",
       "msbuildProject": "../Assembly-CSharp.csproj"
-    },
-    "UniRx/1.0.0": {
-      "type": "project",
-      "path": "../UniRx.csproj",
-      "msbuildProject": "../UniRx.csproj"
-    },
-    "Zenject/1.0.0": {
-      "type": "project",
-      "path": "../Zenject.csproj",
-      "msbuildProject": "../Zenject.csproj"
-    },
-    "Zenject-Editor/1.0.0": {
-      "type": "project",
-      "path": "../Zenject-Editor.csproj",
-      "msbuildProject": "../Zenject-Editor.csproj"
-    },
-    "Zenject-PoolMonitor-Editor/1.0.0": {
-      "type": "project",
-      "path": "../Zenject-PoolMonitor-Editor.csproj",
-      "msbuildProject": "../Zenject-PoolMonitor-Editor.csproj"
-    },
-    "Zenject-ReflectionBaking-Editor/1.0.0": {
-      "type": "project",
-      "path": "../Zenject-ReflectionBaking-Editor.csproj",
-      "msbuildProject": "../Zenject-ReflectionBaking-Editor.csproj"
     }
   },
   "projectFileDependencyGroups": {

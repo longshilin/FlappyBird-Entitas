@@ -8,28 +8,7 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Assembly-CSharp.csproj",
         "projectName": "Assembly-CSharp",
-        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Assembly-CSharp.csproj",
-        "frameworks": {
-          "net471": {
-            "projectReferences": {
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj"
-              },
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj"
-              },
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj"
-              },
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj"
-              },
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
-              }
-            }
-          }
-        }
+        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Assembly-CSharp.csproj"
       },
       "frameworks": {
         "net471": {}
@@ -92,89 +71,6 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
-      }
-    },
-    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj",
-        "projectName": "UniRx",
-        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\UniRx.csproj"
-      },
-      "frameworks": {
-        "net471": {}
-      }
-    },
-    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj",
-        "projectName": "Zenject-Editor",
-        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj",
-        "frameworks": {
-          "net471": {
-            "projectReferences": {
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
-              }
-            }
-          }
-        }
-      },
-      "frameworks": {
-        "net471": {}
-      }
-    },
-    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj",
-        "projectName": "Zenject-PoolMonitor-Editor",
-        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-PoolMonitor-Editor.csproj",
-        "frameworks": {
-          "net471": {
-            "projectReferences": {
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj"
-              },
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
-              }
-            }
-          }
-        }
-      },
-      "frameworks": {
-        "net471": {}
-      }
-    },
-    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj",
-        "projectName": "Zenject-ReflectionBaking-Editor",
-        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-ReflectionBaking-Editor.csproj",
-        "frameworks": {
-          "net471": {
-            "projectReferences": {
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject-Editor.csproj"
-              },
-              "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
-                "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
-              }
-            }
-          }
-        }
-      },
-      "frameworks": {
-        "net471": {}
-      }
-    },
-    "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj",
-        "projectName": "Zenject",
-        "projectPath": "C:\\Users\\Jose\\Documents\\Projects\\Entidades\\Entidades\\Zenject.csproj"
-      },
-      "frameworks": {
-        "net471": {}
       }
     }
   }

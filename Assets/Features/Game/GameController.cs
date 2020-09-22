@@ -8,10 +8,9 @@ public class GameController
 
     public GameController(Contexts contexts, IGameConfiguration configuration)
     {
-        contexts.configuration.SetGameConfiguration(configuration);
-
         _contexts = contexts;
-        _systems = new GameSystems(contexts);
+        _contexts.configuration.SetGameConfiguration(configuration);
+        _systems = new GameSystems(_contexts);
     }
 
     public void Initialize()

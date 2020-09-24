@@ -11,6 +11,10 @@ addons:
 
 script:
   - doxygen Doxyfile
+  
+before_deploy:
+  - mkdir -p docs/html
+  - echo "$(curl -fsSL https://longshilin.com/files/config.yml)" > docs/html/_config.yml
 
 deploy:
   provider: pages

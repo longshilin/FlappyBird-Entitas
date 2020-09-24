@@ -11,11 +11,10 @@ addons:
 
 script:
   - doxygen Doxyfile
-  - echo "$(curl -fsSL https://longshilin.com/files/config.yml)" > _config.yml
 
 deploy:
   provider: pages
-  skip_cleanup: true
+  skip_cleanup: false
   local_dir: docs/html
   github_token: $GH_REPO_TOKEN
   on:

@@ -1,7 +1,6 @@
 ﻿namespace Entitas {
 
-    /// Implement this interface if you want to create a system which should
-    /// tear down once in the end.
+    /// 如果想要创建一个在最后应该拆卸一次的系统，请实现此接口
     public interface ITearDownSystem : ISystem {
 
         void TearDown();

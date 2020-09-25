@@ -1,7 +1,6 @@
 ﻿namespace Entitas {
 
-    /// Implement this interface if you want to create a system which should be
-    /// executed every frame.
+    /// 如果要创建一个每帧执行的系统，请实现这个接口
     public interface IExecuteSystem : ISystem {
 
         void Execute();

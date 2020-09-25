@@ -1,9 +1,7 @@
 ﻿namespace Entitas {
-
-    /// This is the base interface for all systems.
-    /// It's not meant to be implemented.
-    /// Use IInitializeSystem, IExecuteSystem,
-    /// ICleanupSystem or ITearDownSystem.
+    
+    /// 这是所有系统的基本接口。
+    /// 这不是要实现。使用 IInitializeSystem, IExecuteSystem, ICleanupSystem 或 ITearDownSystem。
     public interface ISystem {
     }
 }

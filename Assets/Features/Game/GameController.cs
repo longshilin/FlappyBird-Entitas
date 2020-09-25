@@ -1,6 +1,7 @@
 ﻿using Configuration;
 using Entitas;
 
+/// 游戏控制器
 public class GameController
 {
     readonly Systems _systems;

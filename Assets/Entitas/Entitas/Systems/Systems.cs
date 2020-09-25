@@ -7,6 +7,12 @@ namespace Entitas {
     /// ITearDownSystem, ReactiveSystem and other nested Systems instances.
     /// All systems will be initialized and executed based on the order
     /// you added them.
+    ///
+    /// [translate]
+    /// Systems类提供一个快捷方式去管理多个系统。
+    /// 你可以添加 IInitializeSystem, IExecuteSystem, ICleanupSystem,
+    /// ITearDownSystem, ReactiveSystem 以及其他嵌套的Systems实例。
+    /// 所有的系统将会基于你添加它们的顺序实例化和执行
     public class Systems : IInitializeSystem, IExecuteSystem, ICleanupSystem, ITearDownSystem {
 
         protected readonly List<IInitializeSystem> _initializeSystems;

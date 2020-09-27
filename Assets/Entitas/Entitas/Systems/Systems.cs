@@ -3,8 +3,7 @@ using System.Collections.Generic;
 namespace Entitas {
 
     /// Systems类提供一个快捷方式去管理多个系统。
-    /// 你可以添加 IInitializeSystem, IExecuteSystem, ICleanupSystem,
-    /// ITearDownSystem, ReactiveSystem 以及其他嵌套的Systems实例。
+    /// 你可以添加 IInitializeSystem, IExecuteSystem, ICleanupSystem, ITearDownSystem, ReactiveSystem 以及其他嵌套的Systems实例。
     /// 所有的系统将会基于你添加它们的顺序实例化和执行
     public class Systems : IInitializeSystem, IExecuteSystem, ICleanupSystem, ITearDownSystem {
 
@@ -13,7 +12,7 @@ namespace Entitas {
         protected readonly List<ICleanupSystem> _cleanupSystems;
         protected readonly List<ITearDownSystem> _tearDownSystems;
 
-        /// Creates a new Systems instance.
+        /// 创建一个新的Systems实例。
         public Systems() {
             _initializeSystems = new List<IInitializeSystem>();
             _executeSystems = new List<IExecuteSystem>();
@@ -21,7 +20,7 @@ namespace Entitas {
             _tearDownSystems = new List<ITearDownSystem>();
         }
 
-        /// Adds the system instance to the systems list.
+        /// 将系统实例添加到系统列表中。
         public virtual Systems Add(ISystem system) {
             var initializeSystem = system as IInitializeSystem;
             if (initializeSystem != null) {
@@ -46,39 +45,35 @@ namespace Entitas {
             return this;
         }
 
-        /// Calls Initialize() on all IInitializeSystem and other
-        /// nested Systems instances in the order you added them.
+        /// 按照添加顺序，在所有IInitializeSystem和其他嵌套系统实例上调用Initialize()。
         public virtual void Initialize() {
             for (int i = 0; i < _initializeSystems.Count; i++) {
                 _initializeSystems[i].Initialize();
             }
         }
 
-        /// Calls Execute() on all IExecuteSystem and other
-        /// nested Systems instances in the order you added them.
+        /// 按照添加顺序，在所有IExecuteSystem和其他嵌套系统实例上调用Execute()。
         public virtual void Execute() {
             for (int i = 0; i < _executeSystems.Count; i++) {
                 _executeSystems[i].Execute();
             }
         }
 
-        /// Calls Cleanup() on all ICleanupSystem and other
-        /// nested Systems instances in the order you added them.
+        /// 按照添加顺序，在所有ICleanupSystem和其他嵌套系统实例上调用Cleanup()。
         public virtual void Cleanup() {
             for (int i = 0; i < _cleanupSystems.Count; i++) {
                 _cleanupSystems[i].Cleanup();
             }
         }
 
-        /// Calls TearDown() on all ITearDownSystem  and other
-        /// nested Systems instances in the order you added them.
+        /// 按照添加顺序，在所有ITearDownSystem和其他嵌套Systems实例上调用TearDown()。
         public virtual void TearDown() {
             for (int i = 0; i < _tearDownSystems.Count; i++) {
                 _tearDownSystems[i].TearDown();
             }
         }
 
-        /// Activates all ReactiveSystems in the systems list.
+        /// 激活系统列表中的所有ReactiveSystems。
         public void ActivateReactiveSystems() {
             for (int i = 0; i < _executeSystems.Count; i++) {
                 var system = _executeSystems[i];
@@ -94,10 +89,9 @@ namespace Entitas {
             }
         }
 
-        /// Deactivates all ReactiveSystems in the systems list.
-        /// This will also clear all ReactiveSystems.
-        /// This is useful when you want to soft-restart your application and
-        /// want to reuse your existing system instances.
+        /// 停用系统列表中的所有ReactiveSystems。 
+        /// 这还将清除所有ReactiveSystems。 
+        /// 当您想重新启动应用程序并想重用现有的系统实例时，这很有用。
         public void DeactivateReactiveSystems() {
             for (int i = 0; i < _executeSystems.Count; i++) {
                 var system = _executeSystems[i];
@@ -113,7 +107,7 @@ namespace Entitas {
             }
         }
 
-        /// Clears all ReactiveSystems in the systems list.
+        /// 清除系统列表中的所有ReactiveSystems。
         public void ClearReactiveSystems() {
             for (int i = 0; i < _executeSystems.Count; i++) {
                 var system = _executeSystems[i];

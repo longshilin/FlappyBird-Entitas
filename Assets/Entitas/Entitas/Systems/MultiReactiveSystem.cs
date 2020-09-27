@@ -2,11 +2,9 @@
 
 namespace Entitas {
 
-    /// A ReactiveSystem calls Execute(entities) if there were changes based on
-    /// the specified Collector and will only pass in changed entities.
-    /// A common use-case is to react to changes, e.g. a change of the position
-    /// of an entity to update the gameObject.transform.position
-    /// of the related gameObject.
+    /// 如果基于指定的收集器进行了更改，则ReactiveSystem会调用Execute(entities)，并且只会传递已更改的实体。
+    /// 常见用例是对更改做出反应，例如实体位置的更改以更新相关gameObject的gameObject.transform.position。
+    /// 其与ReactiveSystem的区别在于，MultiReactiveSystem中通过GetTrigger()拿到的是一个收集器组集合。
     public abstract class MultiReactiveSystem<TEntity, TContexts> : IReactiveSystem
         where TEntity : class, IEntity
         where TContexts : class, IContexts {
@@ -28,34 +26,33 @@ namespace Entitas {
             _buffer = new List<TEntity>();
         }
 
-        /// Specify the collector that will trigger the ReactiveSystem.
+        /// 指定将触发ReactiveSystem的收集器。
         protected abstract ICollector[] GetTrigger(TContexts contexts);
 
-        /// This will exclude all entities which don't pass the filter.
+        /// 这将排除所有未通过过滤器的实体。
         protected abstract bool Filter(TEntity entity);
 
         protected abstract void Execute(List<TEntity> entities);
 
-        /// Activates the ReactiveSystem and starts observing changes
-        /// based on the specified Collector.
-        /// ReactiveSystem are activated by default.
+        /// 激活ReactiveSystem并开始观察基于指定收集器的更改。 
+        /// 默认情况下，ReactiveSystem被激活。
         public void Activate() {
             for (int i = 0; i < _collectors.Length; i++) {
                 _collectors[i].Activate();
             }
         }
 
-        /// Deactivates the ReactiveSystem.
-        /// No changes will be tracked while deactivated.
-        /// This will also clear the ReactiveSystem.
-        /// ReactiveSystem are activated by default.
+        /// 停用ReactiveSystem。 
+        /// 停用后不会跟踪任何更改。 
+        /// 这还将清除ReactiveSystem。 
+        /// 默认情况下，ReactiveSystem被激活。
         public void Deactivate() {
             for (int i = 0; i < _collectors.Length; i++) {
                 _collectors[i].Deactivate();
             }
         }
 
-        /// Clears all accumulated changes.
+        /// 清除所有累积的更改。
         public void Clear() {
             for (int i = 0; i < _collectors.Length; i++) {
                 _collectors[i].ClearCollectedEntities();
@@ -64,6 +61,8 @@ namespace Entitas {
 
         /// Will call Execute(entities) with changed entities
         /// if there are any. Otherwise it will not call Execute(entities).
+        /// 如果有的话,将使用更改后的实体调用Execute(entities)。
+        /// 否则，它将不会调用Execute(entities)。
         public void Execute() {
             for (int i = 0; i < _collectors.Length; i++) {
                 var collector = _collectors[i];
@@ -93,6 +92,7 @@ namespace Entitas {
             }
         }
 
+        /// 重写ToString
         public override string ToString() {
             if (_toStringCache == null) {
                 _toStringCache = "MultiReactiveSystem(" + GetType().Name + ")";
@@ -101,6 +101,8 @@ namespace Entitas {
             return _toStringCache;
         }
 
+        /// 终结器（也称为析构函数）用于在垃圾回收器收集类实例时执行任何必要的最终清理操作。
+        /// 此处在该对象垃圾回收的时候停用此ReactiveSystem。
         ~MultiReactiveSystem() {
             Deactivate();
         }

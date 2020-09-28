@@ -6,7 +6,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-#if (!ENTITAS_DISABLE_VISUAL_DEBUGGING && UNITY_EDITOR)
+#if (!ENTITAS_DISABLE_VISUAL_DEBUGGING && UNITY_EDITOR) // 未关闭可视化Debug并且是Editor模式下
 
 public class Feature : Entitas.VisualDebugging.Unity.DebugSystems {
 
@@ -22,7 +22,7 @@ public class Feature : Entitas.VisualDebugging.Unity.DebugSystems {
     }
 }
 
-#elif (!ENTITAS_DISABLE_DEEP_PROFILING && DEVELOPMENT_BUILD)
+#elif (!ENTITAS_DISABLE_DEEP_PROFILING && DEVELOPMENT_BUILD) // 未关闭DEEP PROFILING并且是DEVELOPMENT BUILD模式下
 
 public class Feature : Entitas.Systems {
 
@@ -96,7 +96,7 @@ public class Feature : Entitas.Systems {
     }
 }
 
-#else
+#else // 非上面两种情况的版本
 
 public class Feature : Entitas.Systems {
 

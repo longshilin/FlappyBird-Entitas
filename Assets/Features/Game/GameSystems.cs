@@ -1,5 +1,6 @@
 ﻿using Pipe;
 
+/// 游戏系统。
 public sealed class GameSystems : Feature
 {
     public GameSystems(Contexts contexts)

@@ -1,15 +1,11 @@
 ﻿namespace Entitas {
 
-    /// Implement this interface if you want to create a component which
-    /// you can add to an entity.
-    /// Optionally, you can add these attributes:
-    /// [Unique]: the code generator will generate additional methods for
-    /// the context to ensure that only one entity with this component exists.
-    /// E.g. context.isAnimating = true or context.SetResources();
-    /// [MyContextName, MyOtherContextName]: You can make this component to be
-    /// available only in the specified contexts.
-    /// The code generator can generate these attributes for you.
-    /// More available Attributes can be found in Entitas.CodeGeneration.Attributes/Attributes.
+    /// 如果要创建可以添加到实体的组件，请实现此接口。 
+    ///（可选）您可以添加以下属性：
+    /// [Unique]：代码生成器将为上下文生成其他方法，以确保仅存在具有此组件的一个实体。
+    /// 例如，context.isAnimating = true或context.SetResources(); 
+    /// [MyContextName，MyOtherContextName]：您可以使此组件仅在指定的上下文中可用。代码生成器可以为您生成这些属性。
+    /// 在Entitas.CodeGeneration.Attributes / Attributes中可以找到更多可用的属性。
     public interface IComponent {
     }
 }

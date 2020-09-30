@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EntitasFlappyBird: Assets/Features/Configuration/IGameConfiguration.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EntitasFlappyBird
+   &#160;<span id="projectnumber">1.0 Beta</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_i_game_configuration_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">IGameConfiguration.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_game_configuration_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_entitas.html">Entitas</a>.<a class="code" href="namespace_entitas_1_1_code_generation.html">CodeGeneration</a>.<a class="code" href="namespace_entitas_1_1_code_generation_1_1_attributes.html">Attributes</a>;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespace_configuration.html">    3</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_configuration.html">Configuration</a></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    [<a class="code" href="namespace_configuration.html">Configuration</a>, Unique, ComponentName(<span class="stringliteral">&quot;GameConfiguration&quot;</span>)]</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="interface_configuration_1_1_i_game_configuration.html">    6</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_configuration_1_1_i_game_configuration.html">IGameConfiguration</a></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="interface_configuration_1_1_i_game_configuration.html#a83151807f92aea17c585b0639362c743">    8</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_configuration_1_1_i_game_configuration.html#a83151807f92aea17c585b0639362c743">PlayerUpwardsVelocity</a> { <span class="keyword">get</span>; }</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="interface_configuration_1_1_i_game_configuration.html#a7b2a7ab0b391bbf00e5c2895236a2453">    9</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_configuration_1_1_i_game_configuration.html#a7b2a7ab0b391bbf00e5c2895236a2453">PlayerSpawnOrigin</a> { <span class="keyword">get</span>; }</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="interface_configuration_1_1_i_game_configuration.html#a74fb5d8ffd66e05593e8531ac3ff625e">   11</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_configuration_1_1_i_game_configuration.html#a74fb5d8ffd66e05593e8531ac3ff625e">PipeSpawnInterval</a> { <span class="keyword">get</span>; }</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="interface_configuration_1_1_i_game_configuration.html#a5f4ee6f80fa12956e545ad98cb45df99">   12</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_configuration_1_1_i_game_configuration.html#a5f4ee6f80fa12956e545ad98cb45df99">PipeLifetime</a> { <span class="keyword">get</span>; }</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="interface_configuration_1_1_i_game_configuration.html#a4a120629c20dc66608e58014ec1fa493">   13</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_configuration_1_1_i_game_configuration.html#a4a120629c20dc66608e58014ec1fa493">PipeOrigin</a> { <span class="keyword">get</span>; }</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="interface_configuration_1_1_i_game_configuration.html#aabdcd3434e0caf35d45d3207b4656688">   14</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_configuration_1_1_i_game_configuration.html#aabdcd3434e0caf35d45d3207b4656688">PipeMovementSpeed</a> { <span class="keyword">get</span>; }</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="interface_configuration_1_1_i_game_configuration.html#a396fcc324042ed0479c0ea184f789478">   15</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="interface_configuration_1_1_i_game_configuration.html#a396fcc324042ed0479c0ea184f789478">PipeRandomHeightRange</a> { <span class="keyword">get</span>; }</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div><div class="ttc" id="namespace_entitas_html"><div class="ttname"><a href="namespace_entitas.html">Entitas</a></div><div class="ttdef"><b>Definition:</b> <a href="_collector_8cs_source.html#l00005">Collector.cs:5</a></div></div>
+<div class="ttc" id="interface_configuration_1_1_i_game_configuration_html_a4a120629c20dc66608e58014ec1fa493"><div class="ttname"><a href="interface_configuration_1_1_i_game_configuration.html#a4a120629c20dc66608e58014ec1fa493">Configuration.IGameConfiguration.PipeOrigin</a></div><div class="ttdeci">float PipeOrigin</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_configuration_8cs_source.html#l00013">IGameConfiguration.cs:13</a></div></div>
+<div class="ttc" id="interface_configuration_1_1_i_game_configuration_html_a7b2a7ab0b391bbf00e5c2895236a2453"><div class="ttname"><a href="interface_configuration_1_1_i_game_configuration.html#a7b2a7ab0b391bbf00e5c2895236a2453">Configuration.IGameConfiguration.PlayerSpawnOrigin</a></div><div class="ttdeci">float PlayerSpawnOrigin</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_configuration_8cs_source.html#l00009">IGameConfiguration.cs:9</a></div></div>
+<div class="ttc" id="interface_configuration_1_1_i_game_configuration_html"><div class="ttname"><a href="interface_configuration_1_1_i_game_configuration.html">Configuration.IGameConfiguration</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_game_configuration_8cs_source.html#l00006">IGameConfiguration.cs:6</a></div></div>
+<div class="ttc" id="interface_configuration_1_1_i_game_configuration_html_a5f4ee6f80fa12956e545ad98cb45df99"><div class="ttname"><a href="interface_configuration_1_1_i_game_configuration.html#a5f4ee6f80fa12956e545ad98cb45df99">Configuration.IGameConfiguration.PipeLifetime</a></div><div class="ttdeci">float PipeLifetime</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_configuration_8cs_source.html#l00012">IGameConfiguration.cs:12</a></div></div>
+<div class="ttc" id="namespace_entitas_1_1_code_generation_1_1_attributes_html"><div class="ttname"><a href="namespace_entitas_1_1_code_generation_1_1_attributes.html">Entitas.CodeGeneration.Attributes</a></div><div class="ttdef"><b>Definition:</b> <a href="_cleanup_attribute_8cs_source.html#l00003">CleanupAttribute.cs:3</a></div></div>
+<div class="ttc" id="interface_configuration_1_1_i_game_configuration_html_a396fcc324042ed0479c0ea184f789478"><div class="ttname"><a href="interface_configuration_1_1_i_game_configuration.html#a396fcc324042ed0479c0ea184f789478">Configuration.IGameConfiguration.PipeRandomHeightRange</a></div><div class="ttdeci">float PipeRandomHeightRange</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_configuration_8cs_source.html#l00015">IGameConfiguration.cs:15</a></div></div>
+<div class="ttc" id="interface_configuration_1_1_i_game_configuration_html_aabdcd3434e0caf35d45d3207b4656688"><div class="ttname"><a href="interface_configuration_1_1_i_game_configuration.html#aabdcd3434e0caf35d45d3207b4656688">Configuration.IGameConfiguration.PipeMovementSpeed</a></div><div class="ttdeci">float PipeMovementSpeed</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_configuration_8cs_source.html#l00014">IGameConfiguration.cs:14</a></div></div>
+<div class="ttc" id="interface_configuration_1_1_i_game_configuration_html_a74fb5d8ffd66e05593e8531ac3ff625e"><div class="ttname"><a href="interface_configuration_1_1_i_game_configuration.html#a74fb5d8ffd66e05593e8531ac3ff625e">Configuration.IGameConfiguration.PipeSpawnInterval</a></div><div class="ttdeci">float PipeSpawnInterval</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_configuration_8cs_source.html#l00011">IGameConfiguration.cs:11</a></div></div>
+<div class="ttc" id="interface_configuration_1_1_i_game_configuration_html_a83151807f92aea17c585b0639362c743"><div class="ttname"><a href="interface_configuration_1_1_i_game_configuration.html#a83151807f92aea17c585b0639362c743">Configuration.IGameConfiguration.PlayerUpwardsVelocity</a></div><div class="ttdeci">float PlayerUpwardsVelocity</div><div class="ttdef"><b>Definition:</b> <a href="_i_game_configuration_8cs_source.html#l00008">IGameConfiguration.cs:8</a></div></div>
+<div class="ttc" id="namespace_configuration_html"><div class="ttname"><a href="namespace_configuration.html">Configuration</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_game_configuration_8cs_source.html#l00003">IGameConfiguration.cs:3</a></div></div>
+<div class="ttc" id="namespace_entitas_1_1_code_generation_html"><div class="ttname"><a href="namespace_entitas_1_1_code_generation.html">Entitas.CodeGeneration</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9ac1b3aab64b76272112d328f2cd5995.html">Features</a></li><li class="navelem"><a class="el" href="dir_58c8895c65d1651f30b82e272c4b4eb8.html">Configuration</a></li><li class="navelem"><a class="el" href="_i_game_configuration_8cs.html">IGameConfiguration.cs</a></li>
+    <li class="footer">生成于 2020年 九月 30日 星期三 06:48:06 , 为 EntitasFlappyBird使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

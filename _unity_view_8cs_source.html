@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EntitasFlappyBird: Assets/Features/View/UnityView.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EntitasFlappyBird
+   &#160;<span id="projectnumber">1.0 Beta</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_unity_view_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">UnityView.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_unity_view_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_entitas.html">Entitas</a>;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_entitas.html">Entitas</a>.<a class="code" href="namespace_entitas_1_1_unity.html">Unity</a>;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_view.html">View</a>;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_unity_view.html">    6</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_unity_view.html">UnityView</a> : MonoBehaviour, <a class="code" href="interface_view_1_1_i_unity_view.html">IUnityView</a>, <a class="code" href="interface_i_position_listener.html">IPositionListener</a>, <a class="code" href="interface_i_rotation_listener.html">IRotationListener</a>, <a class="code" href="interface_i_scale_listener.html">IScaleListener</a>, <a class="code" href="interface_i_destroyed_listener.html">IDestroyedListener</a></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_unity_view.html#ac816e3c0fb2843687dee9decc5a8fb50">    8</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="class_game_entity.html">GameEntity</a> <a class="code" href="class_unity_view.html#ac816e3c0fb2843687dee9decc5a8fb50">_entity</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> Vector3 <a class="code" href="class_unity_view.html#ab4f4b5d12f262b825f952715c99d83bc">Position</a></div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_unity_view.html#ab4f4b5d12f262b825f952715c99d83bc">   11</a></span>&#160;    {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">get</span> =&gt; transform.localPosition;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">set</span> =&gt; transform.localPosition = value;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> Quaternion <a class="code" href="class_unity_view.html#a9ddf2940c0d9d08ed25c386010014a79">Rotation</a></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_unity_view.html#a9ddf2940c0d9d08ed25c386010014a79">   17</a></span>&#160;    {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">get</span> =&gt; transform.localRotation;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">set</span> =&gt; transform.localRotation = value;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> Vector3 <a class="code" href="class_unity_view.html#a96c18ca866ff7d9d0b7294f396949da8">Scale</a></div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_unity_view.html#a96c18ca866ff7d9d0b7294f396949da8">   23</a></span>&#160;    {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">get</span> =&gt; transform.localScale;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">set</span> =&gt; transform.localScale = value;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_unity_view.html#a3afaa1d30e15c4fd22356ca65519c94d">   28</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_game_entity.html">GameEntity</a> <a class="code" href="class_entitas_1_1_entity.html">Entity</a> =&gt; <a class="code" href="class_unity_view.html#ac816e3c0fb2843687dee9decc5a8fb50">_entity</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_unity_view.html#ab78c0211fa79fbd716aa1f92fbc847aa">   30</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_view.html#ab78c0211fa79fbd716aa1f92fbc847aa">Link</a>(<a class="code" href="interface_entitas_1_1_i_entity.html">IEntity</a> entity)</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        gameObject.Link(entity);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        _entity = (<a class="code" href="class_game_entity.html">GameEntity</a>)entity;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// add components</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        _entity.<a class="code" href="class_game_entity.html#acb8f0387a8f11a0427a183554ed46448">AddPositionListener</a>(<span class="keyword">this</span>);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        _entity.<a class="code" href="class_game_entity.html#aadda9abad87bd23e1c0bb6b9a5cb6323">AddDestroyedListener</a>(<span class="keyword">this</span>);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        var pos = _entity.<a class="code" href="class_game_entity.html#a56efc51bca124fe56d8292f6d298f096">position</a>.<a class="code" href="class_position_component.html#a3ce5e67c81b58ea6a094cf51f5ade8df">Value</a>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        transform.localPosition = <span class="keyword">new</span> Vector3(pos.x, pos.y);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_unity_view.html#a84af5fa1ad671243959a5b248f7c11e0">   43</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_view.html#a84af5fa1ad671243959a5b248f7c11e0">OnPosition</a>(<a class="code" href="class_game_entity.html">GameEntity</a> entity, Vector3 value)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        transform.localPosition = value;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_unity_view.html#af106a5ac05b6eb0bbc839151e7d416a5">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_view.html#af106a5ac05b6eb0bbc839151e7d416a5">OnDestroyed</a>(<a class="code" href="class_game_entity.html">GameEntity</a> entity)</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_unity_view.html#a3eb1a3665700d0c37d44ee859bc6d1f1">Destroy</a>();</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_unity_view.html#a3eb1a3665700d0c37d44ee859bc6d1f1">   53</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_view.html#a3eb1a3665700d0c37d44ee859bc6d1f1">Destroy</a>()</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        gameObject.Unlink();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        _entity.<a class="code" href="class_entitas_1_1_entity.html#aca53021bab40fc432212d2e0cb553cd2">Destroy</a>();</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="class_unity_view.html#a3eb1a3665700d0c37d44ee859bc6d1f1">Destroy</a>(gameObject);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_unity_view.html#a471e854b99ec415e200b2fd170150990">   61</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_view.html#a471e854b99ec415e200b2fd170150990">OnRotation</a>(<a class="code" href="class_game_entity.html">GameEntity</a> entity, Quaternion value)</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        transform.localRotation = value;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_unity_view.html#af5ed2868e41de7b8424bf95c2e271f90">   66</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_view.html#af5ed2868e41de7b8424bf95c2e271f90">OnScale</a>(<a class="code" href="class_game_entity.html">GameEntity</a> entity, Vector3 value)</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        transform.localScale = value;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_unity_view.html#ae06c8a7d3f65cca2f5a2ff14b2715621">   71</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_unity_view.html#ae06c8a7d3f65cca2f5a2ff14b2715621">Awake</a>()</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div><div class="ttc" id="class_unity_view_html_ab78c0211fa79fbd716aa1f92fbc847aa"><div class="ttname"><a href="class_unity_view.html#ab78c0211fa79fbd716aa1f92fbc847aa">UnityView.Link</a></div><div class="ttdeci">virtual void Link(IEntity entity)</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00030">UnityView.cs:30</a></div></div>
+<div class="ttc" id="namespace_entitas_html"><div class="ttname"><a href="namespace_entitas.html">Entitas</a></div><div class="ttdef"><b>Definition:</b> <a href="_collector_8cs_source.html#l00005">Collector.cs:5</a></div></div>
+<div class="ttc" id="class_unity_view_html_ac816e3c0fb2843687dee9decc5a8fb50"><div class="ttname"><a href="class_unity_view.html#ac816e3c0fb2843687dee9decc5a8fb50">UnityView._entity</a></div><div class="ttdeci">GameEntity _entity</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00008">UnityView.cs:8</a></div></div>
+<div class="ttc" id="class_game_entity_html_acb8f0387a8f11a0427a183554ed46448"><div class="ttname"><a href="class_game_entity.html#acb8f0387a8f11a0427a183554ed46448">GameEntity.AddPositionListener</a></div><div class="ttdeci">void AddPositionListener(System.Collections.Generic.List&lt; IPositionListener &gt; newValue)</div><div class="ttdef"><b>Definition:</b> <a href="_game_position_listener_component_8cs_source.html#l00014">GamePositionListenerComponent.cs:14</a></div></div>
+<div class="ttc" id="class_unity_view_html"><div class="ttname"><a href="class_unity_view.html">UnityView</a></div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00006">UnityView.cs:6</a></div></div>
+<div class="ttc" id="class_entitas_1_1_entity_html_aca53021bab40fc432212d2e0cb553cd2"><div class="ttname"><a href="class_entitas_1_1_entity.html#aca53021bab40fc432212d2e0cb553cd2">Entitas.Entity.Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00382">Entity.cs:382</a></div></div>
+<div class="ttc" id="class_unity_view_html_a84af5fa1ad671243959a5b248f7c11e0"><div class="ttname"><a href="class_unity_view.html#a84af5fa1ad671243959a5b248f7c11e0">UnityView.OnPosition</a></div><div class="ttdeci">virtual void OnPosition(GameEntity entity, Vector3 value)</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00043">UnityView.cs:43</a></div></div>
+<div class="ttc" id="class_unity_view_html_a96c18ca866ff7d9d0b7294f396949da8"><div class="ttname"><a href="class_unity_view.html#a96c18ca866ff7d9d0b7294f396949da8">UnityView.Scale</a></div><div class="ttdeci">virtual Vector3 Scale</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00023">UnityView.cs:23</a></div></div>
+<div class="ttc" id="class_unity_view_html_ab4f4b5d12f262b825f952715c99d83bc"><div class="ttname"><a href="class_unity_view.html#ab4f4b5d12f262b825f952715c99d83bc">UnityView.Position</a></div><div class="ttdeci">virtual Vector3 Position</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00011">UnityView.cs:11</a></div></div>
+<div class="ttc" id="namespace_entitas_1_1_unity_html"><div class="ttname"><a href="namespace_entitas_1_1_unity.html">Entitas.Unity</a></div><div class="ttdef"><b>Definition:</b> <a href="_entity_link_8cs_source.html#l00004">EntityLink.cs:4</a></div></div>
+<div class="ttc" id="interface_i_scale_listener_html"><div class="ttname"><a href="interface_i_scale_listener.html">IScaleListener</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_scale_listener_8cs_source.html#l00009">IScaleListener.cs:9</a></div></div>
+<div class="ttc" id="class_game_entity_html_a56efc51bca124fe56d8292f6d298f096"><div class="ttname"><a href="class_game_entity.html#a56efc51bca124fe56d8292f6d298f096">GameEntity.position</a></div><div class="ttdeci">PositionComponent position</div><div class="ttdef"><b>Definition:</b> <a href="_game_position_component_8cs_source.html#l00011">GamePositionComponent.cs:11</a></div></div>
+<div class="ttc" id="class_entitas_1_1_entity_html"><div class="ttname"><a href="class_entitas_1_1_entity.html">Entitas.Entity</a></div><div class="ttdef"><b>Definition:</b> <a href="_entity_8cs_source.html#l00010">Entity.cs:10</a></div></div>
+<div class="ttc" id="class_unity_view_html_a9ddf2940c0d9d08ed25c386010014a79"><div class="ttname"><a href="class_unity_view.html#a9ddf2940c0d9d08ed25c386010014a79">UnityView.Rotation</a></div><div class="ttdeci">virtual Quaternion Rotation</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00017">UnityView.cs:17</a></div></div>
+<div class="ttc" id="class_position_component_html_a3ce5e67c81b58ea6a094cf51f5ade8df"><div class="ttname"><a href="class_position_component.html#a3ce5e67c81b58ea6a094cf51f5ade8df">PositionComponent.Value</a></div><div class="ttdeci">Vector3 Value</div><div class="ttdef"><b>Definition:</b> <a href="_position_component_8cs_source.html#l00008">PositionComponent.cs:8</a></div></div>
+<div class="ttc" id="interface_i_rotation_listener_html"><div class="ttname"><a href="interface_i_rotation_listener.html">IRotationListener</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_rotation_listener_8cs_source.html#l00009">IRotationListener.cs:9</a></div></div>
+<div class="ttc" id="class_unity_view_html_af5ed2868e41de7b8424bf95c2e271f90"><div class="ttname"><a href="class_unity_view.html#af5ed2868e41de7b8424bf95c2e271f90">UnityView.OnScale</a></div><div class="ttdeci">void OnScale(GameEntity entity, Vector3 value)</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00066">UnityView.cs:66</a></div></div>
+<div class="ttc" id="interface_view_1_1_i_unity_view_html"><div class="ttname"><a href="interface_view_1_1_i_unity_view.html">View.IUnityView</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_unity_view_8cs_source.html#l00006">IUnityView.cs:6</a></div></div>
+<div class="ttc" id="interface_i_position_listener_html"><div class="ttname"><a href="interface_i_position_listener.html">IPositionListener</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_position_listener_8cs_source.html#l00009">IPositionListener.cs:9</a></div></div>
+<div class="ttc" id="class_unity_view_html_a3eb1a3665700d0c37d44ee859bc6d1f1"><div class="ttname"><a href="class_unity_view.html#a3eb1a3665700d0c37d44ee859bc6d1f1">UnityView.Destroy</a></div><div class="ttdeci">virtual void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00053">UnityView.cs:53</a></div></div>
+<div class="ttc" id="namespace_view_html"><div class="ttname"><a href="namespace_view.html">View</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_unity_view_8cs_source.html#l00004">IUnityView.cs:4</a></div></div>
+<div class="ttc" id="interface_entitas_1_1_i_entity_html"><div class="ttname"><a href="interface_entitas_1_1_i_entity.html">Entitas.IEntity</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_entity_8cs_source.html#l00016">IEntity.cs:16</a></div></div>
+<div class="ttc" id="class_unity_view_html_a471e854b99ec415e200b2fd170150990"><div class="ttname"><a href="class_unity_view.html#a471e854b99ec415e200b2fd170150990">UnityView.OnRotation</a></div><div class="ttdeci">void OnRotation(GameEntity entity, Quaternion value)</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00061">UnityView.cs:61</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_game_entity_html_aadda9abad87bd23e1c0bb6b9a5cb6323"><div class="ttname"><a href="class_game_entity.html#aadda9abad87bd23e1c0bb6b9a5cb6323">GameEntity.AddDestroyedListener</a></div><div class="ttdeci">void AddDestroyedListener(System.Collections.Generic.List&lt; IDestroyedListener &gt; newValue)</div><div class="ttdef"><b>Definition:</b> <a href="_game_destroyed_listener_component_8cs_source.html#l00014">GameDestroyedListenerComponent.cs:14</a></div></div>
+<div class="ttc" id="class_unity_view_html_af106a5ac05b6eb0bbc839151e7d416a5"><div class="ttname"><a href="class_unity_view.html#af106a5ac05b6eb0bbc839151e7d416a5">UnityView.OnDestroyed</a></div><div class="ttdeci">virtual void OnDestroyed(GameEntity entity)</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00048">UnityView.cs:48</a></div></div>
+<div class="ttc" id="class_game_entity_html"><div class="ttname"><a href="class_game_entity.html">GameEntity</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_any_game_lost_listener_component_8cs_source.html#l00009">GameAnyGameLostListenerComponent.cs:9</a></div></div>
+<div class="ttc" id="class_unity_view_html_ae06c8a7d3f65cca2f5a2ff14b2715621"><div class="ttname"><a href="class_unity_view.html#ae06c8a7d3f65cca2f5a2ff14b2715621">UnityView.Awake</a></div><div class="ttdeci">virtual void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="_unity_view_8cs_source.html#l00071">UnityView.cs:71</a></div></div>
+<div class="ttc" id="interface_i_destroyed_listener_html"><div class="ttname"><a href="interface_i_destroyed_listener.html">IDestroyedListener</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_destroyed_listener_8cs_source.html#l00009">IDestroyedListener.cs:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9ac1b3aab64b76272112d328f2cd5995.html">Features</a></li><li class="navelem"><a class="el" href="dir_7746c3c0cf1d62b66e2e8645791d38a1.html">View</a></li><li class="navelem"><a class="el" href="_unity_view_8cs.html">UnityView.cs</a></li>
+    <li class="footer">生成于 2020年 九月 30日 星期三 06:48:06 , 为 EntitasFlappyBird使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

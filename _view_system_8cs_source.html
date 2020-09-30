@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EntitasFlappyBird: Assets/Features/View/ViewSystem.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EntitasFlappyBird
+   &#160;<span id="projectnumber">1.0 Beta</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_view_system_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ViewSystem.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_view_system_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_entitas.html">Entitas</a>;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_view_system.html">    5</a></span>&#160;<span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_view_system.html">ViewSystem</a> : <a class="code" href="class_entitas_1_1_reactive_system.html">ReactiveSystem</a>&lt;GameEntity&gt;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    readonly Transform _parent;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">private</span> <a class="code" href="class_contexts.html">Contexts</a> _contexts;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_view_system.html#a5d9d10c894a9b29612ce86d2d4b97d29">   10</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_view_system.html#a5d9d10c894a9b29612ce86d2d4b97d29">ViewSystem</a>(<a class="code" href="class_contexts.html">Contexts</a> contexts) : base(contexts.game)</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        _contexts = contexts;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        _parent = <span class="keyword">new</span> GameObject(<span class="stringliteral">&quot;Views&quot;</span>).transform;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code" href="interface_entitas_1_1_i_collector.html">ICollector&lt;GameEntity&gt;</a> <a class="code" href="class_view_system.html#a96d044b565a3052f6adfac890f478bd8">GetTrigger</a>(<a class="code" href="interface_entitas_1_1_i_context.html">IContext&lt;GameEntity&gt;</a> context)</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        =&gt; context.CreateCollector(<a class="code" href="class_game_matcher.html">GameMatcher</a>.<a class="code" href="class_game_matcher.html#a70127c013d40779e9a23a0eeac49dc3f">Asset</a>);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_view_system.html#a10a2d809b19dd2082d5ec88ea7863ea5">Filter</a>(<a class="code" href="class_game_entity.html">GameEntity</a> entity) =&gt; entity.<a class="code" href="class_game_entity.html#ac453f894b606858f46c0e5c3ba6e83a9">hasAsset</a> &amp;&amp; !entity.<a class="code" href="class_game_entity.html#ab3d139b845e530227608901a0268538e">hasView</a>;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_view_system.html#a20047ec382d1260cb19eb1f794c3a058">   21</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_view_system.html#a20047ec382d1260cb19eb1f794c3a058">Execute</a>(List&lt;GameEntity&gt; entities)</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">foreach</span> (var e <span class="keywordflow">in</span> entities)</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            e.AddView(InstantiateView(e));</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="interface_i_view.html">IView</a> InstantiateView(<a class="code" href="class_game_entity.html">GameEntity</a> entity)</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        var prefab = Resources.Load&lt;GameObject&gt;(entity.<a class="code" href="class_game_entity.html#a7552f241a11c834d4bf68b2ce1f7732f">asset</a>.<a class="code" href="class_asset_component.html#a7369d47017d2dbff23c2d8aef13e6878">Value</a>);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        var view = Object.Instantiate(prefab, _parent).GetComponent&lt;<a class="code" href="interface_i_view.html">IView</a>&gt;();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        view.<a class="code" href="interface_i_linked.html#a9b96b2a40cd4e7fac7b98f17de0f174a">Link</a>(entity);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> view;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="ttc" id="interface_entitas_1_1_i_collector_html"><div class="ttname"><a href="interface_entitas_1_1_i_collector.html">Entitas.ICollector</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_collector_8cs_source.html#l00005">ICollector.cs:5</a></div></div>
+<div class="ttc" id="class_view_system_html_a10a2d809b19dd2082d5ec88ea7863ea5"><div class="ttname"><a href="class_view_system.html#a10a2d809b19dd2082d5ec88ea7863ea5">ViewSystem.Filter</a></div><div class="ttdeci">override bool Filter(GameEntity entity)</div></div>
+<div class="ttc" id="interface_entitas_1_1_i_context_html"><div class="ttname"><a href="interface_entitas_1_1_i_context.html">Entitas.IContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_context_8cs_source.html#l00008">IContext.cs:8</a></div></div>
+<div class="ttc" id="namespace_entitas_html"><div class="ttname"><a href="namespace_entitas.html">Entitas</a></div><div class="ttdef"><b>Definition:</b> <a href="_collector_8cs_source.html#l00005">Collector.cs:5</a></div></div>
+<div class="ttc" id="class_game_entity_html_ac453f894b606858f46c0e5c3ba6e83a9"><div class="ttname"><a href="class_game_entity.html#ac453f894b606858f46c0e5c3ba6e83a9">GameEntity.hasAsset</a></div><div class="ttdeci">bool hasAsset</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_component_8cs_source.html#l00012">GameAssetComponent.cs:12</a></div></div>
+<div class="ttc" id="class_game_entity_html_ab3d139b845e530227608901a0268538e"><div class="ttname"><a href="class_game_entity.html#ab3d139b845e530227608901a0268538e">GameEntity.hasView</a></div><div class="ttdeci">bool hasView</div><div class="ttdef"><b>Definition:</b> <a href="_game_view_component_8cs_source.html#l00012">GameViewComponent.cs:12</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_game_entity_html_a7552f241a11c834d4bf68b2ce1f7732f"><div class="ttname"><a href="class_game_entity.html#a7552f241a11c834d4bf68b2ce1f7732f">GameEntity.asset</a></div><div class="ttdeci">AssetComponent asset</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_component_8cs_source.html#l00011">GameAssetComponent.cs:11</a></div></div>
+<div class="ttc" id="interface_i_linked_html_a9b96b2a40cd4e7fac7b98f17de0f174a"><div class="ttname"><a href="interface_i_linked.html#a9b96b2a40cd4e7fac7b98f17de0f174a">ILinked.Link</a></div><div class="ttdeci">void Link(IEntity entity)</div></div>
+<div class="ttc" id="class_game_matcher_html_a70127c013d40779e9a23a0eeac49dc3f"><div class="ttname"><a href="class_game_matcher.html#a70127c013d40779e9a23a0eeac49dc3f">GameMatcher.Asset</a></div><div class="ttdeci">static Entitas.IMatcher&lt; GameEntity &gt; Asset</div><div class="ttdef"><b>Definition:</b> <a href="_game_asset_component_8cs_source.html#l00045">GameAssetComponent.cs:45</a></div></div>
+<div class="ttc" id="class_asset_component_html_a7369d47017d2dbff23c2d8aef13e6878"><div class="ttname"><a href="class_asset_component.html#a7369d47017d2dbff23c2d8aef13e6878">AssetComponent.Value</a></div><div class="ttdeci">string Value</div><div class="ttdef"><b>Definition:</b> <a href="_asset_component_8cs_source.html#l00004">AssetComponent.cs:4</a></div></div>
+<div class="ttc" id="class_view_system_html_a5d9d10c894a9b29612ce86d2d4b97d29"><div class="ttname"><a href="class_view_system.html#a5d9d10c894a9b29612ce86d2d4b97d29">ViewSystem.ViewSystem</a></div><div class="ttdeci">ViewSystem(Contexts contexts)</div><div class="ttdef"><b>Definition:</b> <a href="_view_system_8cs_source.html#l00010">ViewSystem.cs:10</a></div></div>
+<div class="ttc" id="class_view_system_html_a20047ec382d1260cb19eb1f794c3a058"><div class="ttname"><a href="class_view_system.html#a20047ec382d1260cb19eb1f794c3a058">ViewSystem.Execute</a></div><div class="ttdeci">override void Execute(List&lt; GameEntity &gt; entities)</div><div class="ttdef"><b>Definition:</b> <a href="_view_system_8cs_source.html#l00021">ViewSystem.cs:21</a></div></div>
+<div class="ttc" id="class_view_system_html_a96d044b565a3052f6adfac890f478bd8"><div class="ttname"><a href="class_view_system.html#a96d044b565a3052f6adfac890f478bd8">ViewSystem.GetTrigger</a></div><div class="ttdeci">override ICollector&lt; GameEntity &gt; GetTrigger(IContext&lt; GameEntity &gt; context)</div></div>
+<div class="ttc" id="class_entitas_1_1_reactive_system_html"><div class="ttname"><a href="class_entitas_1_1_reactive_system.html">Entitas.ReactiveSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_reactive_system_8cs_source.html#l00007">ReactiveSystem.cs:7</a></div></div>
+<div class="ttc" id="class_game_matcher_html"><div class="ttname"><a href="class_game_matcher.html">GameMatcher</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_any_game_lost_listener_component_8cs_source.html#l00041">GameAnyGameLostListenerComponent.cs:41</a></div></div>
+<div class="ttc" id="interface_i_view_html"><div class="ttname"><a href="interface_i_view.html">IView</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_view_8cs_source.html#l00003">IView.cs:3</a></div></div>
+<div class="ttc" id="class_view_system_html"><div class="ttname"><a href="class_view_system.html">ViewSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_view_system_8cs_source.html#l00005">ViewSystem.cs:5</a></div></div>
+<div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
+<div class="ttc" id="class_game_entity_html"><div class="ttname"><a href="class_game_entity.html">GameEntity</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_any_game_lost_listener_component_8cs_source.html#l00009">GameAnyGameLostListenerComponent.cs:9</a></div></div>
+<div class="ttc" id="class_contexts_html"><div class="ttname"><a href="class_contexts.html">Contexts</a></div><div class="ttdef"><b>Definition:</b> <a href="_contexts_8cs_source.html#l00009">Contexts.cs:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9ac1b3aab64b76272112d328f2cd5995.html">Features</a></li><li class="navelem"><a class="el" href="dir_7746c3c0cf1d62b66e2e8645791d38a1.html">View</a></li><li class="navelem"><a class="el" href="_view_system_8cs.html">ViewSystem.cs</a></li>
+    <li class="footer">生成于 2020年 九月 30日 星期三 06:48:06 , 为 EntitasFlappyBird使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+var interface_entitas_1_1_i_context =
+[
+    [ "AddEntityIndex", "interface_entitas_1_1_i_context.html#ab7c272d32c425287833840fd396d6f47", null ],
+    [ "ClearComponentPool", "interface_entitas_1_1_i_context.html#a044a36473d1869f3a801d550eaa7f76a", null ],
+    [ "ClearComponentPools", "interface_entitas_1_1_i_context.html#a9fd13eae83cc27fe0e8dc7002a6fcd5b", null ],
+    [ "CreateEntity", "interface_entitas_1_1_i_context.html#afd49bb2eb16c4e8c0df7b29cc7fb2989", null ],
+    [ "DestroyAllEntities", "interface_entitas_1_1_i_context.html#ae6be7801f0e761657e2aa638180a36a5", null ],
+    [ "GetEntities", "interface_entitas_1_1_i_context.html#a687cdd7f8a1fa68bd07d607b9da50739", null ],
+    [ "GetEntityIndex", "interface_entitas_1_1_i_context.html#a2dbfc9470c7ca75d077117165ee37cf0", null ],
+    [ "GetGroup", "interface_entitas_1_1_i_context.html#a256adc561f9f908a56b926172880bc4d", null ],
+    [ "HasEntity", "interface_entitas_1_1_i_context.html#aee9964009effe08164b113fa3f0c51c4", null ],
+    [ "RemoveAllEventHandlers", "interface_entitas_1_1_i_context.html#a223849e9390fc445dacd915905e3882d", null ],
+    [ "Reset", "interface_entitas_1_1_i_context.html#ae822d8c8575d557e41efd9ccf275cd02", null ],
+    [ "ResetCreationIndex", "interface_entitas_1_1_i_context.html#a3334ecf6109c48cfc40baf9846f99064", null ],
+    [ "componentPools", "interface_entitas_1_1_i_context.html#a534e9decd438ba991bfb7a500e436af5", null ],
+    [ "contextInfo", "interface_entitas_1_1_i_context.html#a5b6139f0e751d17d0057382b9f22d8e7", null ],
+    [ "count", "interface_entitas_1_1_i_context.html#a3984e0e0203e3dd4b6688bb7cd5dc753", null ],
+    [ "retainedEntitiesCount", "interface_entitas_1_1_i_context.html#aee534db2d6bcfa27ee4c39369d7d300e", null ],
+    [ "reusableEntitiesCount", "interface_entitas_1_1_i_context.html#a9ee85314c28231c65b9f885e43f36d83", null ],
+    [ "totalComponents", "interface_entitas_1_1_i_context.html#a5338fbc687b4d9afdb6618ff967e8f84", null ],
+    [ "OnEntityCreated", "interface_entitas_1_1_i_context.html#afdfa9bfc843cdb0683ae675385b25191", null ],
+    [ "OnEntityDestroyed", "interface_entitas_1_1_i_context.html#a6c6e3e829f6417f414f1ceaaf3e0c96b", null ],
+    [ "OnEntityWillBeDestroyed", "interface_entitas_1_1_i_context.html#a93c68375ee498ec882722eb6c9d16dc7", null ],
+    [ "OnGroupCreated", "interface_entitas_1_1_i_context.html#ad0475c9a947c4c3dccde935a1af5852c", null ]
+];

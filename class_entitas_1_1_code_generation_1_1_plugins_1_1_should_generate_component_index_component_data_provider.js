@@ -1,0 +1,4 @@
+var class_entitas_1_1_code_generation_1_1_plugins_1_1_should_generate_component_index_component_data_provider =
+[
+    [ "Provide", "class_entitas_1_1_code_generation_1_1_plugins_1_1_should_generate_component_index_component_data_provider.html#a2fcb129e56b1053f3383a2eeb43844a1", null ]
+];

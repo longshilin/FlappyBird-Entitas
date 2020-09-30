@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>EntitasFlappyBird: Assets/Features/Game/GameRestartSystem.cs 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">EntitasFlappyBird
+   &#160;<span id="projectnumber">1.0 Beta</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="namespaces.html"><span>包</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_game_restart_system_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameRestartSystem.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_restart_system_8cs.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_entitas.html">Entitas</a>;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_game_restart_system.html">    4</a></span>&#160;<span class="keyword">public</span> sealed <span class="keyword">class </span><a class="code" href="class_game_restart_system.html">GameRestartSystem</a> : <a class="code" href="class_entitas_1_1_reactive_system.html">ReactiveSystem</a>&lt;GameEntity&gt;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">private</span> <a class="code" href="class_contexts.html">Contexts</a> _contexts;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_game_restart_system.html#a3968e201e55cc2f8a12e07aadfae0493">    8</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_game_restart_system.html#a3968e201e55cc2f8a12e07aadfae0493">GameRestartSystem</a>(<a class="code" href="class_contexts.html">Contexts</a> contexts) : base(contexts.game)</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        _contexts = contexts;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_game_restart_system.html#acb9c8b43254e4e2bb6342d59acd95fd4">   13</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_game_restart_system.html#acb9c8b43254e4e2bb6342d59acd95fd4">GameRestartSystem</a>(<a class="code" href="interface_entitas_1_1_i_context.html">IContext&lt;GameEntity&gt;</a> context) : base(context)</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_game_restart_system.html#afb1e903eb245d89eb4e58591a70bc368">   17</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_game_restart_system.html#afb1e903eb245d89eb4e58591a70bc368">GameRestartSystem</a>(<a class="code" href="interface_entitas_1_1_i_collector.html">ICollector&lt;GameEntity&gt;</a> collector) : base(collector)</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_game_restart_system.html#ae9d767b8bef23b9e31ce3a79a98bde76">   21</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code" href="interface_entitas_1_1_i_collector.html">ICollector&lt;GameEntity&gt;</a> <a class="code" href="class_game_restart_system.html#ae9d767b8bef23b9e31ce3a79a98bde76">GetTrigger</a>(<a class="code" href="interface_entitas_1_1_i_context.html">IContext&lt;GameEntity&gt;</a> context)</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> context.CreateCollector(<a class="code" href="class_game_matcher.html">GameMatcher</a>.<a class="code" href="class_game_matcher.html#ac0fe1c954039ba61b885d92216f7d64b">GameRestarted</a>);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_game_restart_system.html#a30238ec2ea816ed1b1b90bfe89f60c1d">   26</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_game_restart_system.html#a30238ec2ea816ed1b1b90bfe89f60c1d">Filter</a>(<a class="code" href="class_game_entity.html">GameEntity</a> entity)</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> entity.<a class="code" href="class_game_entity.html#a31676b847a33e24c645f7b4d2fb5ed95">isGameRestarted</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_game_restart_system.html#acef22a9fd85bb75f07de44da2756d48e">   31</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_game_restart_system.html#acef22a9fd85bb75f07de44da2756d48e">Execute</a>(List&lt;GameEntity&gt; entities)</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// destroy the player</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        var player = _contexts.game.playerEntity;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        player.isDestroyed = <span class="keyword">true</span>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// destroy the pipes</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        var pipes = _contexts.game.GetGroup(<a class="code" href="class_game_matcher.html">GameMatcher</a>.<a class="code" href="class_game_matcher.html#a9df682580fb40eae1736832e19753fd0">Pipe</a>);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">foreach</span> (var pipe <span class="keywordflow">in</span> pipes)</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            pipe.isDestroyed = <span class="keyword">true</span>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// after removing previous entities, restart the game</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        _contexts.game.isGameRestarted = <span class="keyword">false</span>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        _contexts.game.isGameLost = <span class="keyword">false</span>;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        _contexts.game.isGameStarted = <span class="keyword">true</span>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div><div class="ttc" id="class_game_entity_html_a31676b847a33e24c645f7b4d2fb5ed95"><div class="ttname"><a href="class_game_entity.html#a31676b847a33e24c645f7b4d2fb5ed95">GameEntity.isGameRestarted</a></div><div class="ttdeci">bool isGameRestarted</div><div class="ttdef"><b>Definition:</b> <a href="_game_game_restarted_component_8cs_source.html#l00040">GameGameRestartedComponent.cs:40</a></div></div>
+<div class="ttc" id="interface_entitas_1_1_i_collector_html"><div class="ttname"><a href="interface_entitas_1_1_i_collector.html">Entitas.ICollector</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_collector_8cs_source.html#l00005">ICollector.cs:5</a></div></div>
+<div class="ttc" id="class_game_restart_system_html_ae9d767b8bef23b9e31ce3a79a98bde76"><div class="ttname"><a href="class_game_restart_system.html#ae9d767b8bef23b9e31ce3a79a98bde76">GameRestartSystem.GetTrigger</a></div><div class="ttdeci">override ICollector&lt; GameEntity &gt; GetTrigger(IContext&lt; GameEntity &gt; context)</div><div class="ttdef"><b>Definition:</b> <a href="_game_restart_system_8cs_source.html#l00021">GameRestartSystem.cs:21</a></div></div>
+<div class="ttc" id="class_game_matcher_html_a9df682580fb40eae1736832e19753fd0"><div class="ttname"><a href="class_game_matcher.html#a9df682580fb40eae1736832e19753fd0">GameMatcher.Pipe</a></div><div class="ttdeci">static Entitas.IMatcher&lt; GameEntity &gt; Pipe</div><div class="ttdef"><b>Definition:</b> <a href="_game_pipe_component_8cs_source.html#l00045">GamePipeComponent.cs:45</a></div></div>
+<div class="ttc" id="interface_entitas_1_1_i_context_html"><div class="ttname"><a href="interface_entitas_1_1_i_context.html">Entitas.IContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_context_8cs_source.html#l00008">IContext.cs:8</a></div></div>
+<div class="ttc" id="namespace_entitas_html"><div class="ttname"><a href="namespace_entitas.html">Entitas</a></div><div class="ttdef"><b>Definition:</b> <a href="_collector_8cs_source.html#l00005">Collector.cs:5</a></div></div>
+<div class="ttc" id="class_game_matcher_html_ac0fe1c954039ba61b885d92216f7d64b"><div class="ttname"><a href="class_game_matcher.html#ac0fe1c954039ba61b885d92216f7d64b">GameMatcher.GameRestarted</a></div><div class="ttdeci">static Entitas.IMatcher&lt; GameEntity &gt; GameRestarted</div><div class="ttdef"><b>Definition:</b> <a href="_game_game_restarted_component_8cs_source.html#l00072">GameGameRestartedComponent.cs:72</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_game_restart_system_html_acb9c8b43254e4e2bb6342d59acd95fd4"><div class="ttname"><a href="class_game_restart_system.html#acb9c8b43254e4e2bb6342d59acd95fd4">GameRestartSystem.GameRestartSystem</a></div><div class="ttdeci">GameRestartSystem(IContext&lt; GameEntity &gt; context)</div><div class="ttdef"><b>Definition:</b> <a href="_game_restart_system_8cs_source.html#l00013">GameRestartSystem.cs:13</a></div></div>
+<div class="ttc" id="class_game_restart_system_html_a3968e201e55cc2f8a12e07aadfae0493"><div class="ttname"><a href="class_game_restart_system.html#a3968e201e55cc2f8a12e07aadfae0493">GameRestartSystem.GameRestartSystem</a></div><div class="ttdeci">GameRestartSystem(Contexts contexts)</div><div class="ttdef"><b>Definition:</b> <a href="_game_restart_system_8cs_source.html#l00008">GameRestartSystem.cs:8</a></div></div>
+<div class="ttc" id="class_game_restart_system_html"><div class="ttname"><a href="class_game_restart_system.html">GameRestartSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_restart_system_8cs_source.html#l00004">GameRestartSystem.cs:4</a></div></div>
+<div class="ttc" id="class_game_restart_system_html_a30238ec2ea816ed1b1b90bfe89f60c1d"><div class="ttname"><a href="class_game_restart_system.html#a30238ec2ea816ed1b1b90bfe89f60c1d">GameRestartSystem.Filter</a></div><div class="ttdeci">override bool Filter(GameEntity entity)</div><div class="ttdef"><b>Definition:</b> <a href="_game_restart_system_8cs_source.html#l00026">GameRestartSystem.cs:26</a></div></div>
+<div class="ttc" id="class_game_restart_system_html_afb1e903eb245d89eb4e58591a70bc368"><div class="ttname"><a href="class_game_restart_system.html#afb1e903eb245d89eb4e58591a70bc368">GameRestartSystem.GameRestartSystem</a></div><div class="ttdeci">GameRestartSystem(ICollector&lt; GameEntity &gt; collector)</div><div class="ttdef"><b>Definition:</b> <a href="_game_restart_system_8cs_source.html#l00017">GameRestartSystem.cs:17</a></div></div>
+<div class="ttc" id="class_game_restart_system_html_acef22a9fd85bb75f07de44da2756d48e"><div class="ttname"><a href="class_game_restart_system.html#acef22a9fd85bb75f07de44da2756d48e">GameRestartSystem.Execute</a></div><div class="ttdeci">override void Execute(List&lt; GameEntity &gt; entities)</div><div class="ttdef"><b>Definition:</b> <a href="_game_restart_system_8cs_source.html#l00031">GameRestartSystem.cs:31</a></div></div>
+<div class="ttc" id="class_entitas_1_1_reactive_system_html"><div class="ttname"><a href="class_entitas_1_1_reactive_system.html">Entitas.ReactiveSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="_reactive_system_8cs_source.html#l00007">ReactiveSystem.cs:7</a></div></div>
+<div class="ttc" id="class_game_matcher_html"><div class="ttname"><a href="class_game_matcher.html">GameMatcher</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_any_game_lost_listener_component_8cs_source.html#l00041">GameAnyGameLostListenerComponent.cs:41</a></div></div>
+<div class="ttc" id="class_game_entity_html"><div class="ttname"><a href="class_game_entity.html">GameEntity</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_any_game_lost_listener_component_8cs_source.html#l00009">GameAnyGameLostListenerComponent.cs:9</a></div></div>
+<div class="ttc" id="class_contexts_html"><div class="ttname"><a href="class_contexts.html">Contexts</a></div><div class="ttdef"><b>Definition:</b> <a href="_contexts_8cs_source.html#l00009">Contexts.cs:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_9ac1b3aab64b76272112d328f2cd5995.html">Features</a></li><li class="navelem"><a class="el" href="dir_c74d34bed2966d1e6ad36a37e2a8fa8a.html">Game</a></li><li class="navelem"><a class="el" href="_game_restart_system_8cs.html">GameRestartSystem.cs</a></li>
+    <li class="footer">生成于 2020年 九月 30日 星期三 06:48:06 , 为 EntitasFlappyBird使用 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>
